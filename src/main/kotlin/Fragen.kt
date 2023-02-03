@@ -502,7 +502,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """genau sehr gut .. kronos hat 83 Satelliten   """
                     )
-                    true
+                    richtigeAntworten ) true
 
                     player.score += 1
 
@@ -591,7 +591,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """genau Richtig  ..unsere Sonne    """
                     )
-
+                    richtigeAntworten = true
                     player.score += 1
 
                 }
@@ -615,7 +615,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
 
                     )
-                    println("next player..Bitte")
+                    println("next player..Bitte:")
 
 
                 }
@@ -680,7 +680,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """genau Richtig  .Angst und Dimmos  sind die Satelliten   """
                     )
-                    true
+                    richtigeAntworten = true
                     player.score += 1
 
                 }
