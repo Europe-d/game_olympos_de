@@ -173,6 +173,7 @@ fun main() {
 
     //todo willst du weiter spielen ?
     erde.back()
+    println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
     frage.spieleWeiter()
 
     //todo fünfte Frage

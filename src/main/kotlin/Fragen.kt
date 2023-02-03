@@ -354,29 +354,15 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
     // TODO d: play weiter yes or no
     open fun spieleWeiter() {
+        val antworten = readLine()!!.trim()
 
-
-            while (true) {
-                println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
-                val antworten = readLine()!!.trim()
-
-                when (antworten) {
-                    "Nein" -> {
-                        println("Das Spiel wird beendet.Schade wo du nicht  weiter spielen willst..")
-                        break
-                    }
-                    "Ja" -> {
-                        println("Das Spiel wird fortgesetzt.")
-                        continue
-                    }
-                    else -> {
-                        println("Ungültige Eingabe. Bitte geben Sie Ja oder Nein ein.")
-                    }
-                }
+        when (antworten) {
+            "Nein" -> {
+                println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
+                System.exit(0)
             }
         }
-
-
+    }
 
 
 
