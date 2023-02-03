@@ -52,7 +52,7 @@ fun main() {
 
     var gewinner: Player
     var verloren: Player
-    var actuellePlayer: Player
+    var aktuellePlayer: Player
     println()
     //todo bewegen und vorstellen von user mit jahre
     println("So welcome ${spielern[0].name} und  ${spielern[1].name} bitte fest halten ... ")
@@ -64,7 +64,7 @@ fun main() {
     println("wer anfange ersten ? xmmm ")
     Thread.sleep(2000)
     gewinner = anakatema(spielern[0], spielern[1])
-    actuellePlayer = gewinner
+    aktuellePlayer = gewinner
     if (spielern[0] == gewinner) {
         verloren = spielern[1]
     } else {
@@ -89,9 +89,13 @@ fun main() {
     println()
 
     //todo erste frage
-    if (frage.ersteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+
+    if (frage.ersteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
+
     }
+
 
 
 
@@ -107,8 +111,9 @@ fun main() {
     println()
     println("zweite Frage jetzt können wir weiter spielen:")
 
-    if (frage.zweiteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.zweiteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+    println(aktuellePlayer.name)
     }
     println()
 
@@ -127,14 +132,15 @@ fun main() {
     saturn.meteoriten()
     uranus.blauFarbe()
 
-    actuellePlayer.name
+    aktuellePlayer.name
 
     //todo tritte frage planet ruft
     println()
 
 
-    if (frage.tritteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.tritteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
     println("pzzzzzzzziiiiiii....pzzzzziiii")
     println("ooooo ein Planet  ruft uns an ..wer ist :  ..ooo Esel ruft von :")
@@ -155,8 +161,9 @@ fun main() {
     println("ooookkkk ...wo wir geblieben ....cool .. ich bin neugierig  was du antworten")
 
 
-    if (frage.vierteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.vierteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
 
     println()
@@ -171,8 +178,8 @@ fun main() {
     //todo fünfte Frage
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
 
-    if (frage.feunfteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.feunfteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = verloren
     }
     println()
     venus.bewegen()
@@ -182,8 +189,8 @@ fun main() {
     // todo sechste Frage
 
 
-    if (frage.sechsteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.sechsteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = verloren
     }
     uranus.platz
     saturn.meteoriten()
@@ -193,16 +200,16 @@ fun main() {
 
 
     //todo siebte Frage
-    if (frage.siebteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.siebteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = verloren
     }
 
     merkur.umlaufgeschwindigkeit
     neptun.atmen()
 
     //todo achte Frage
-    if (frage.achteFrage(actuellePlayer) == false) {
-        actuellePlayer = verloren
+    if (frage.achteFrage(aktuellePlayer) == false) {
+        aktuellePlayer = verloren
     }
 
     venus.bewegen()
@@ -211,6 +218,7 @@ fun main() {
     joker.witz4()
     println("jetzt ...Ich habe dich ..... jetzt wirst du sehen (Here is your end.) ..!!!")
     println("Danke, dass Sie bis zum Ende gespielen haben. ! sehen wir wer ist gewonnen jetzt :P")
+
 
 
     //todo  the end
@@ -247,4 +255,14 @@ fun anakatema(player1: Player, player2: Player): Player {
 
     }
     return gewinner
+}
+
+fun wechselSpieler(aktuellespielern : Player,spielern :MutableList<Player>): Player{
+
+    if(aktuellespielern == spielern[0] ){
+        return spielern[1]
+    }else{
+        return spielern[0]
+    }
+
 }

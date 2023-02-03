@@ -22,7 +22,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
             val ersteAntwort = readln().uppercase()
 
-            //val firstAntwort: String = ersteAntwort
+
             when (ersteAntwort) {
                 erwthsh1 -> {
                     println("""oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden Eiswürfel und wir sendet dich bei planet Mars/Aris bis next rude... """)
@@ -36,8 +36,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         }
                         Thread.sleep(1000)
                     }
+
                     println("Gutes Einfrieren, bis zum nächsten rude. :) ")
                     println("next player..Bitte")
+
                 }
 
                 erwthsh2 -> {
@@ -60,7 +62,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     }
 
                     println("Gutes Einfrieren, bis zum nächsten rude. :) ")
-                    println("next player..Bitte")
+                    println("next player..Bitte:")
 
                 }
 
@@ -106,7 +108,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         """perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
 
                     )
-                    true
+                    richtigeAntworten = true
                     player.score += 1
 
                 }
@@ -199,7 +201,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         |hallooooo ersten muss tu rucksack kaufen ..aber ok ich lasse dich weil du bist sympatisch 
                         | next frage ..ich verschenken dir ein punkte :) :) hhehehehe.""".trimMargin()
                     )
-                    true
+                    richtigeAntworten = true
                     player.score += 1
                 }
 
@@ -218,7 +220,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         Thread.sleep(3000)
 
                     }
-                    println("next player..Bitte")
+                    println("next player..Bitte : ")
 
                 }
 
@@ -266,7 +268,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
 
     //todo tetart erotisi
-    open fun vierteFrage(player: Player) :Boolean {
+    open fun vierteFrage(player: Player): Boolean {
         print("jetzt sehen uns etwas andere ...  ")
         println(
             """Wer ist der Satellit der Erde? ? !!""".trimMargin()
@@ -290,7 +292,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """Du bist gut ..ok ..macht weiter!!""".trimMargin()
                     )
-                    true
+                    richtigeAntworten = true
                     player.score += 1
                 }
 
@@ -346,7 +348,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
         }
 
-return richtigeAntworten
+        return richtigeAntworten
     }
 
 
@@ -381,7 +383,7 @@ return richtigeAntworten
 
 
     //todo pempti erotisi
-    open fun feunfteFrage(player: Player):Boolean {
+    open fun feunfteFrage(player: Player): Boolean {
 
         println(
             """Wer hat behauptet, dass Hermes und Apollo derselbe Planet sind_?""".trimMargin()
@@ -420,7 +422,7 @@ return richtigeAntworten
 
                 erwthsh11 -> {
                     println("Sehr schon , gehen wir zur nächsten Frage .")
-                    true
+                    richtigeAntworten = true
                     player.score += 1
                 }
 
@@ -453,12 +455,12 @@ return richtigeAntworten
 
         }
 
-return  richtigeAntworten
+        return richtigeAntworten
     }
 
 
     //todo ekti erotisi
-    open fun sechsteFrage(player: Player):Boolean {
+    open fun sechsteFrage(player: Player): Boolean {
 
         println(
             """Welcher Planet hat die meisten Satelliten??""".trimMargin()
@@ -511,7 +513,7 @@ return  richtigeAntworten
                         """Leider nein Uranos hat nur 27 """.trimMargin()
                     )
                     println("in 3 sekunde Abflug um den Planeten Uranos, um die Satelliten zu sehen  ")
-                    richtigeAntworten =false
+                    richtigeAntworten = false
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
                             println("$i sekunde noch...")
@@ -541,7 +543,7 @@ return  richtigeAntworten
             println("Error: Bitte gib eine gültige antwort ein.")
 
         }
-return richtigeAntworten
+        return richtigeAntworten
 
     }
 
@@ -636,7 +638,7 @@ return richtigeAntworten
 
 
     //todo ebdomi  erotisi
-    open fun achteFrage(player: Player) :Boolean {
+    open fun achteFrage(player: Player): Boolean {
 
         println(
             """wie viel  Satelliten der Planet Mars hat ?""".trimMargin()
@@ -718,7 +720,7 @@ return richtigeAntworten
             println("Error: Bitte gib eine gültige antwort ein.")
 
         }
-return richtigeAntworten
+        return richtigeAntworten
 
     }
 
