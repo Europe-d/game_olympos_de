@@ -353,393 +353,388 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
 
     // TODO d: play weiter yes or no
-    open fun spieleWeiter(): Boolean {
-
-        var weiterSpiel = false
-        var antwortVonSpielen = readln().uppercase()
-        val weiterSpielen = antwortVonSpielen.uppercase()
+    open fun spieleWeiter() {
 
 
-        var yes = "ja".uppercase()
-        var nein = "nein".uppercase()
+            while (true) {
+                println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
+                val antworten = readLine()!!.trim()
 
-        println("Willst du weiterspielen?  'ja' oder 'nein' ! ")
-        var weiter = readln().uppercase()
-        while (yes in weiterSpielen) {
-            if (yes in weiterSpielen) {
-                println("Perfekt ..wir spielen weiter")
-                weiterSpiel = true
-
+                when (antworten) {
+                    "Nein" -> {
+                        println("Das Spiel wird beendet.Schade wo du nicht  weiter spielen willst..")
+                        break
+                    }
+                    "Ja" -> {
+                        println("Das Spiel wird fortgesetzt.")
+                        continue
+                    }
+                    else -> {
+                        println("Ungültige Eingabe. Bitte geben Sie Ja oder Nein ein.")
+                    }
+                }
             }
-            else if (nein in weiterSpielen) {
-                println("Schade ,wir sehen uns next mal")
-                break
-            }
-
-
         }
-        return weiterSpiel
-    }
 
 
 
 
 
-    //todo pempti erotisi
-    open fun feunfteFrage(player: Player): Boolean {
+//todo pempti erotisi
+open fun feunfteFrage(player: Player): Boolean {
 
-        println(
-            """Wer hat behauptet, dass Hermes und Apollo derselbe Planet sind_?""".trimMargin()
-        )
-        println(" A) Mariner 10")
-        println(" B) Pythagoras")
-        println(" C) Tim. Alexandro")
-        try {
+    println(
+        """Wer hat behauptet, dass Hermes und Apollo derselbe Planet sind_?""".trimMargin()
+    )
+    println(" A) Mariner 10")
+    println(" B) Pythagoras")
+    println(" C) Tim. Alexandro")
+    try {
 
-            val erwthsh10 = "A"
-            val erwthsh11 = "B"
-            val erwthsh12 = "C"
+        val erwthsh10 = "A"
+        val erwthsh11 = "B"
+        val erwthsh12 = "C"
 
-            val ersteAntwort = readln().uppercase()
+        val ersteAntwort = readln().uppercase()
 
-            //val firstAntwort: String = ersteAntwort
-            when (ersteAntwort) {
-                erwthsh10 -> {
-                    println(
-                        """oooooo nein ... sie haben false antworten ,.. in 3 sekunde  senden wir dich in planet Hermes 
+        //val firstAntwort: String = ersteAntwort
+        when (ersteAntwort) {
+            erwthsh10 -> {
+                println(
+                    """oooooo nein ... sie haben false antworten ,.. in 3 sekunde  senden wir dich in planet Hermes 
                     |...bis next rude...er gibt deine straffe """.trimMargin()
-                    )
-                    richtigeAntworten = false
-                    for (i in 3 downTo 1) {
-                        if (i in 0..ersteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
+                )
+                richtigeAntworten = false
+                for (i in 3 downTo 1) {
+                    if (i in 0..ersteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
 
-                        }
-                        Thread.sleep(1000)
                     }
-
-                    println("next player..Bitte")
+                    Thread.sleep(1000)
                 }
 
-                erwthsh11 -> {
-                    println("Sehr schon , gehen wir zur nächsten Frage .")
-                    richtigeAntworten = true
-                    player.score += 1
-                }
+                println("next player..Bitte")
+            }
 
-                erwthsh12 -> {
-                    println("""oooooo nein ... sie haben false antworten ,.. in 5 sekunde  Sie werden ein Komet  ...... """)
-                    richtigeAntworten = false
-                    for (i in 5 downTo 1) {
-                        if (i in 0..ersteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
+            erwthsh11 -> {
+                println("Sehr schon , gehen wir zur nächsten Frage .")
+                richtigeAntworten = true
+                player.score += 1
+            }
 
-                        }
-                        Thread.sleep(1000)
+            erwthsh12 -> {
+                println("""oooooo nein ... sie haben false antworten ,.. in 5 sekunde  Sie werden ein Komet  ...... """)
+                richtigeAntworten = false
+                for (i in 5 downTo 1) {
+                    if (i in 0..ersteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
+
                     }
-
-
+                    Thread.sleep(1000)
                 }
 
-
-                else -> {
-                    println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
-                    feunfteFrage(player)
-                }
 
             }
-        } catch (ex: Exception) {
-            ex.message
-            println("Error: Bitte gib eine gültige antwort ein.")
-
-        }
-
-        return richtigeAntworten
-    }
 
 
-    //todo ekti erotisi
-    open fun sechsteFrage(player: Player): Boolean {
-
-        println(
-            """Welcher Planet hat die meisten Satelliten??""".trimMargin()
-        )
-        println()
-
-        println(" A) Mars/Dias")
-        println(" B) Saturn/Kronos")
-        println(" C) Uranos")
-        try {
-
-            val erwthsh7 = "A"
-            val erwthsh8 = "B"
-            val erwthsh9 = "C"
-
-            val tritteAntwort = readln().uppercase()
-
-            val antwortTritte: String = tritteAntwort
-            when (antwortTritte) {
-                erwthsh7 -> {
-                    println(
-                        """leider war nicht die richtige antwort .Der Planet Dias  hat 80 Satelliten, aber der Planet kronos (Saturn) hat mehr. """.trimMargin()
-                    )
-                    richtigeAntworten = false
-                    println("in 3 sekunde Abflug um den Planeten Mars, um die Satelliten zu sehen  ")
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
-
-                        }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
-                    }
-                }
-
-                erwthsh8 -> {
-                    println(
-                        """genau sehr gut .. kronos hat 83 Satelliten   """
-                    )
-                    richtigeAntworten = true
-
-                    player.score += 1
-
-                }
-
-                erwthsh9 -> {
-                    println(
-                        """Leider nein Uranos hat nur 27 """.trimMargin()
-                    )
-                    println("in 3 sekunde Abflug um den Planeten Uranos, um die Satelliten zu sehen  ")
-                    richtigeAntworten = false
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
-
-                        }
-                        Thread.sleep(3000)
-                    }
-                    println(
-
-                    )
-                    println("next player..Bitte")
-
-
-                }
-
-
-                else -> {
-                    println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
-                    sechsteFrage(player)
-                }
-
+            else -> {
+                println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
+                feunfteFrage(player)
             }
-        } catch (ex: Exception) {
-            ex.message
-            println("Error: Bitte gib eine gültige antwort ein.")
 
         }
-        return richtigeAntworten
+    } catch (ex: Exception) {
+        ex.message
+        println("Error: Bitte gib eine gültige antwort ein.")
 
     }
 
+    return richtigeAntworten
+}
 
-    //todo ebdomi  erotisi
-    open fun siebteFrage(player: Player): Boolean {
 
-        println(
-            """Da ist ein großer, heller Stern, wenn ich mich ihm nähere, verglühe ich. Was ist das?""".trimMargin()
-        )
-        println()
+//todo ekti erotisi
+open fun sechsteFrage(player: Player): Boolean {
 
-        println(" A) Ursa Major")
-        println(" B) Sonne")
-        println(" C) Aquila")
-        try {
+    println(
+        """Welcher Planet hat die meisten Satelliten??""".trimMargin()
+    )
+    println()
 
-            val erwthsh7 = "A"
-            val erwthsh8 = "B"
-            val erwthsh9 = "C"
+    println(" A) Mars/Dias")
+    println(" B) Saturn/Kronos")
+    println(" C) Uranos")
+    try {
 
-            val tritteAntwort = readln().uppercase()
+        val erwthsh7 = "A"
+        val erwthsh8 = "B"
+        val erwthsh9 = "C"
 
-            val antwortTritte: String = tritteAntwort
-            when (antwortTritte) {
-                erwthsh7 -> {
-                    println(
-                        """falsche Antwort ...Es ist seit jeher das bekannteste Sternbild, was den Teil mit der charakteristischen 
+        val tritteAntwort = readln().uppercase()
+
+        val antwortTritte: String = tritteAntwort
+        when (antwortTritte) {
+            erwthsh7 -> {
+                println(
+                    """leider war nicht die richtige antwort .Der Planet Dias  hat 80 Satelliten, aber der Planet kronos (Saturn) hat mehr. """.trimMargin()
+                )
+                richtigeAntworten = false
+                println("in 3 sekunde Abflug um den Planeten Mars, um die Satelliten zu sehen  ")
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
+
+                    }
+                    Thread.sleep(3000)
+                    println("next player..Bitte")
+                }
+            }
+
+            erwthsh8 -> {
+                println(
+                    """genau sehr gut .. kronos hat 83 Satelliten   """
+                )
+                richtigeAntworten = true
+
+                player.score += 1
+
+            }
+
+            erwthsh9 -> {
+                println(
+                    """Leider nein Uranos hat nur 27 """.trimMargin()
+                )
+                println("in 3 sekunde Abflug um den Planeten Uranos, um die Satelliten zu sehen  ")
+                richtigeAntworten = false
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
+
+                    }
+                    Thread.sleep(3000)
+                }
+                println(
+
+                )
+                println("next player..Bitte")
+
+
+            }
+
+
+            else -> {
+                println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
+                sechsteFrage(player)
+            }
+
+        }
+    } catch (ex: Exception) {
+        ex.message
+        println("Error: Bitte gib eine gültige antwort ein.")
+
+    }
+    return richtigeAntworten
+
+}
+
+
+//todo ebdomi  erotisi
+open fun siebteFrage(player: Player): Boolean {
+
+    println(
+        """Da ist ein großer, heller Stern, wenn ich mich ihm nähere, verglühe ich. Was ist das?""".trimMargin()
+    )
+    println()
+
+    println(" A) Ursa Major")
+    println(" B) Sonne")
+    println(" C) Aquila")
+    try {
+
+        val erwthsh7 = "A"
+        val erwthsh8 = "B"
+        val erwthsh9 = "C"
+
+        val tritteAntwort = readln().uppercase()
+
+        val antwortTritte: String = tritteAntwort
+        when (antwortTritte) {
+            erwthsh7 -> {
+                println(
+                    """falsche Antwort ...Es ist seit jeher das bekannteste Sternbild, was den Teil mit der charakteristischen 
                             |"Topf"- oder "Pflug"-Form betrifft. Als flächenmäßig drittgrößte Konstellation.  """.trimMargin()
-                    )
+                )
 
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
 
-                        }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
                     }
+                    Thread.sleep(3000)
+                    println("next player..Bitte")
                 }
+            }
 
-                erwthsh8 -> {
-                    println(
-                        """genau Richtig  ..unsere Sonne    """
-                    )
-                    richtigeAntworten = true
-                    player.score += 1
+            erwthsh8 -> {
+                println(
+                    """genau Richtig  ..unsere Sonne    """
+                )
+                richtigeAntworten = true
+                player.score += 1
 
-                }
+            }
 
-                erwthsh9 -> {
-                    println(
-                        """Leider nein Adler... ist ein Sternbild, das bereits in der Antike von Ptolemäus 
+            erwthsh9 -> {
+                println(
+                    """Leider nein Adler... ist ein Sternbild, das bereits in der Antike von Ptolemäus 
                             |beschrieben wurde und zu den 88 offiziellen Sternbildern der Internationalen 
                             |Astronomischen Union gehört.""".trimMargin()
-                    )
+                )
 
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
 
-                        }
-                        Thread.sleep(3000)
                     }
-                    println(
-
-                    )
-                    println("next player..Bitte:")
-
-
+                    Thread.sleep(3000)
                 }
+                println(
 
+                )
+                println("next player..Bitte:")
 
-                else -> {
-                    println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
-                    siebteFrage(player)
-                }
 
             }
-        } catch (ex: Exception) {
-            ex.message
-            println("Error: Bitte gib eine gültige antwort ein.")
+
+
+            else -> {
+                println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
+                siebteFrage(player)
+            }
 
         }
-        return richtigeAntworten
+    } catch (ex: Exception) {
+        ex.message
+        println("Error: Bitte gib eine gültige antwort ein.")
 
     }
+    return richtigeAntworten
+
+}
 
 
-    //todo ebdomi  erotisi
-    open fun achteFrage(player: Player): Boolean {
+//todo ebdomi  erotisi
+open fun achteFrage(player: Player): Boolean {
 
-        println(
-            """wie viel  Satelliten der Planet Mars hat ?""".trimMargin()
-        )
-        println()
+    println(
+        """wie viel  Satelliten der Planet Mars hat ?""".trimMargin()
+    )
+    println()
 
-        println(" A) 17")
-        println(" B) 2")
-        println(" C) 8")
-        try {
+    println(" A) 17")
+    println(" B) 2")
+    println(" C) 8")
+    try {
 
-            val erwthsh7 = "A"
-            val erwthsh8 = "B"
-            val erwthsh9 = "C"
+        val erwthsh7 = "A"
+        val erwthsh8 = "B"
+        val erwthsh9 = "C"
 
-            val tritteAntwort = readln().uppercase()
+        val tritteAntwort = readln().uppercase()
 
-            val antwortTritte: String = tritteAntwort
-            when (antwortTritte) {
-                erwthsh7 -> {
-                    println(
-                        """falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
-                    )
-                    println("in 3 sekunden du werdest ein sterne ich überlegen dich hier zu lassen ")
-                    richtigeAntworten = false
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
+        val antwortTritte: String = tritteAntwort
+        when (antwortTritte) {
+            erwthsh7 -> {
+                println(
+                    """falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
+                )
+                println("in 3 sekunden du werdest ein sterne ich überlegen dich hier zu lassen ")
+                richtigeAntworten = false
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
 
-                        }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
                     }
+                    Thread.sleep(3000)
+                    println("next player..Bitte")
                 }
+            }
 
-                erwthsh8 -> {
-                    println(
-                        """genau Richtig  .Angst und Dimmos  sind die Satelliten   """
-                    )
-                    richtigeAntworten = true
-                    player.score += 1
-
-                }
-
-                erwthsh9 -> {
-                    println(
-                        """falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
-                    )
-                    richtigeAntworten = false
-                    println("in 3 sekunden du werdest ein sterne ich überlegen dich hier zu lassen ")
-
-                    for (i in 3 downTo 1) {
-                        if (i in 0..tritteAntwort.length) {
-                            println("$i sekunde noch...")
-                        } else {
-                            println("$i sekunde noch...")
-
-                        }
-                        Thread.sleep(3000)
-                    }
-                    println(
-
-                    )
-
-
-                }
-
-
-                else -> {
-                    println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
-                    achteFrage(player)
-                }
+            erwthsh8 -> {
+                println(
+                    """genau Richtig  .Angst und Dimmos  sind die Satelliten   """
+                )
+                richtigeAntworten = true
+                player.score += 1
 
             }
-        } catch (ex: Exception) {
-            ex.message
-            println("Error: Bitte gib eine gültige antwort ein.")
 
-        }
-        return richtigeAntworten
+            erwthsh9 -> {
+                println(
+                    """falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
+                )
+                richtigeAntworten = false
+                println("in 3 sekunden du werdest ein sterne ich überlegen dich hier zu lassen ")
 
-    }
+                for (i in 3 downTo 1) {
+                    if (i in 0..tritteAntwort.length) {
+                        println("$i sekunde noch...")
+                    } else {
+                        println("$i sekunde noch...")
+
+                    }
+                    Thread.sleep(3000)
+                }
+                println(
+
+                )
 
 
-    //todo gia to poios tha kerdisei
-    open fun gewonnen() {
-        Thread.sleep(2000)
-        for (i in 10 downTo 1) {
-            if (i in 0..5) {
-                println("$i Minuten noch...")
-            } else {
-                println("$i Minute noch...")
             }
-            Thread.sleep(4000)
+
+
+            else -> {
+                println("es gibt keine Richtige Antwort,versuchen Sie es erneut Bitte mit A,B,C")
+                achteFrage(player)
+            }
+
         }
-        // println("unsere gewonnen ist : ${Player(aktuelleSpieler)}")
+    } catch (ex: Exception) {
+        ex.message
+        println("Error: Bitte gib eine gültige antwort ein.")
 
     }
+    return richtigeAntworten
+
+}
+
+
+//todo gia to poios tha kerdisei
+open fun gewonnen() {
+    Thread.sleep(2000)
+    for (i in 10 downTo 1) {
+        if (i in 0..5) {
+            println("$i Minuten noch...")
+        } else {
+            println("$i Minute noch...")
+        }
+        Thread.sleep(4000)
+    }
+    // println("unsere gewonnen ist : ${Player(aktuelleSpieler)}")
+
+}
 }
