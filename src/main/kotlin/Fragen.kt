@@ -502,7 +502,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """genau sehr gut .. kronos hat 83 Satelliten   """
                     )
-                    richtigeAntworten ) true
+                    richtigeAntworten = true
 
                     player.score += 1
 
