@@ -179,7 +179,8 @@ fun main() {
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
 
     if (frage.feunfteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = verloren
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
     println()
     venus.bewegen()
@@ -190,7 +191,8 @@ fun main() {
 
 
     if (frage.sechsteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = verloren
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
     uranus.platz
     saturn.meteoriten()
@@ -201,7 +203,8 @@ fun main() {
 
     //todo siebte Frage
     if (frage.siebteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = verloren
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
 
     merkur.umlaufgeschwindigkeit
@@ -209,7 +212,8 @@ fun main() {
 
     //todo achte Frage
     if (frage.achteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = verloren
+        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        println(aktuellePlayer.name)
     }
 
     venus.bewegen()

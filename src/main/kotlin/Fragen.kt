@@ -362,6 +362,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
         var yes = "ja".uppercase()
         var nein = "nein".uppercase()
+
         println("Willst du weiterspielen?  'ja' oder 'nein' ! ")
         var weiter = readln().uppercase()
         while (yes in weiterSpielen) {
@@ -370,8 +371,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 weiterSpiel = true
 
             }
-            if (nein in weiterSpielen) {
-
+            else if (nein in weiterSpielen) {
                 println("Schade ,wir sehen uns next mal")
                 break
             }
@@ -380,6 +380,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
         }
         return weiterSpiel
     }
+
+
+
 
 
     //todo pempti erotisi
