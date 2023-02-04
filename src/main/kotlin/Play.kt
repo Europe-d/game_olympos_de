@@ -94,7 +94,7 @@ fun main() {
     Thread.sleep(2000)
     println("jetzt dürfen wir die frage stellen")
     println()
-
+    Thread.sleep(5000)
     //todo erste frage
 
     if (frage.ersteFrage(aktuellePlayer) == false) {
