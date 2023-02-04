@@ -31,6 +31,17 @@ fun main() {
     var neptun = Neptun("Neptun", 3.883, 8, 14)
 
 
+    var lassPlanet: MutableMap<String,Int> =
+        mutableMapOf(
+            "Merkur" to 1,
+            "Venus" to 2,
+            "Erde" to 3,
+            "Mars"  to 4,
+            "Jupiter" to 5,
+            "Saturn" to 6,
+            "Uranus" to 7,
+            "Neptun" to 8,
+            )
     // todo name von vogel
     var joker = Witz("Spaßvogel")
 
@@ -49,6 +60,10 @@ fun main() {
 
 
     }
+
+
+
+
     //todo hier die geben ihre alter
     spielern[0].alterVonplayer1()
     spielern[1].alterVonplayer1()
@@ -143,16 +158,12 @@ fun main() {
     //aktuellePlayer.name
 //todo eine liste mit name von planet
 
-    var lassPlanet: MutableMap<String,Int> =
-        mutableMapOf(
-            "Mars"  to 4,
-            "Saturn" to 6,
-            "Uranus" to 7,
-            "Merkur" to 1,
-            "Venus" to 2,
-            "Erde" to 3,
-            "Neptun" to 8,
-            "Jupiter" to 5)
+
+
+
+
+
+
 
     //todo tritte frage planet ruft
     println()
@@ -269,19 +280,27 @@ fun main() {
 
 
     //todo  the end
-
+    Thread.sleep(20000)
     frage.gewonnen()
+    Thread.sleep(2000)
     frage.keineLust()
+    Thread.sleep(2000)
     frage.gewonnen2()
 
-    Thread.sleep(5000)
+
     spielern[0].playScore()
     spielern[1].playScore()
-    println(
-        """die unsere Planet sind :( ${lassPlanet.keys.sorted()} )
-            |und das Geschenk des Gewinners : ist Natürlich  "POMMES" """.trimMargin())
 
-    println("THE END")
+
+    println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
+
+
+    println(
+        """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
+            |
+            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin())
+
+    println("                                                       THE END")
 }
 
 
