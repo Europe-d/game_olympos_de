@@ -28,13 +28,13 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println("""oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden Eiswürfel und wir sendet dich bei planet Mars bis next rude... """)
                     richtigeAntworten = false
                     for (i in 3 downTo 1) {
-                        if (i in 0..ersteAntwort.length) {
+                        if (i in 0..ersteAntwort.hashCode()) {
                             println("$i sekunde noch...")
                         } else {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(1000)
+                        Thread.sleep(2000)
                     }
 
                     println("Gutes Einfrieren, bis zum nächsten rude. :) ")
@@ -58,7 +58,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(1000)
+                        Thread.sleep(2000)
                     }
 
                     println("Gutes Einfrieren, bis zum nächsten rude. :) ")
@@ -104,8 +104,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             val antwortZweite: String = zweiteAntwort
             when (antwortZweite) {
                 erwthsh4 -> {
-                    println(
-                        """perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
+                    println("""perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
 
                     )
                     richtigeAntworten = true
@@ -114,10 +113,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 erwthsh5 -> {
-                    println(
-                        """tut es mir leid,Sie haben falsch geantwortet. 
-                            Sie werden in 3 sekunde eine Esel ...und bleiben sie in Erde  bis next rude """
-                    )
+                    println("""tut es mir leid,Sie haben falsch geantwortet. 
+                            Sie werden in 3 sekunde eine Esel ...und bleiben sie in Erde  bis next rude """)
                     richtigeAntworten = false
                     for (i in 3 downTo 1) {
                         if (i in 0..antwortZweite.length) {
@@ -127,7 +124,6 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(3000)
-                        //sound
                     }
 
                     println("viel spaß, bis zum nächsten rude. :) ")
@@ -136,8 +132,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 erwthsh6 -> {
-                    println(
-                        """tut es mir leid,Sie haben falsch geantwortet. 
+                    println("""tut es mir leid,Sie haben falsch geantwortet. 
                             |Sie werden in 3 sekunde eine Esel ...und bleiben sie in Mars  bis next rude  :) """.trimMargin()
                     )
                     richtigeAntworten = false
@@ -191,14 +186,14 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             val erwthsh8 = "B"
             val erwthsh9 = "C"
 
-            val tritteAntwort = readln().uppercase()
 
+            val tritteAntwort = readln().uppercase()
             val antwortTritte: String = tritteAntwort
             when (antwortTritte) {
                 erwthsh7 -> {
                     println(
                         """,..echt jetzt ..
-                        |hallooooo ersten muss tu rucksack kaufen ..aber ok ich lasse dich weil du bist sympatisch 
+                        |hallooooo ersten muss tu rücksack kaufen ..aber ok ich lasse dich weil du bist sympatisch 
                         | next frage ..ich verschenken dir ein punkte :) :) hhehehehe.""".trimMargin()
                     )
                     richtigeAntworten = true
@@ -217,8 +212,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
-
+                        Thread.sleep(2000)
                     }
                     println("next player..Bitte : ")
 
@@ -239,7 +233,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
                     }
                     println(
                         """und jetzt was hast du verstanden .. wir sind beide ohne geld geblieben ... pfff 
@@ -308,16 +302,15 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
                     }
                     println("Es ist dunkel, ich weiß ... warte bis zum Morgen, dann wird es dämmern.  :) ")
-                    println("next player..Bitte")
+                    println("next player..Bitte :")
 
                 }
 
                 erwthsh9 -> {
-                    println(
-                        """leider falsch antworten ..du werdest ein UFO  ,keine Hoffnung  E.t. ist nicht da   ."""
+                    println("""leider falsch antworten ..du werdest ein UFO  ,keine Hoffnung  E.t. ist nicht da   ."""
                     )
                     richtigeAntworten = false
                     for (i in 3 downTo 1) {
@@ -327,9 +320,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
                         println("bb.... bb .... wzzzziiiiiib")
-                        println("next player..Bitte")
+                        println("next player..Bitte :")
                     }
 
 
@@ -397,10 +390,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(1000)
+                        Thread.sleep(2000)
                     }
 
-                    println("next player..Bitte")
+                    println("next player..Bitte :")
                 }
 
                 erwthsh11 -> {
@@ -419,9 +412,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(1000)
+                        Thread.sleep(2000)
                     }
-
+                    println("next player..Bitte :")
 
                 }
 
@@ -476,8 +469,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
+                        Thread.sleep(2000)
+                        println("next player..Bitte :")
                     }
                 }
 
@@ -504,12 +497,11 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
+                        println("next player..Bitte:")
                     }
-                    println(
 
-                    )
-                    println("next player..Bitte")
+
 
 
                 }
@@ -565,8 +557,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
+                        Thread.sleep(2000)
+                        println("next player..Bitte :")
                     }
                 }
 
@@ -593,12 +585,11 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
+                        println("next player..Bitte:")
                     }
-                    println(
 
-                    )
-                    println("next player..Bitte:")
+
 
 
                 }
@@ -654,8 +645,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
-                        println("next player..Bitte")
+                        Thread.sleep(2000)
+                        println("next player..Bitte :")
                     }
                 }
 
@@ -682,11 +673,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             println("$i sekunde noch...")
 
                         }
-                        Thread.sleep(3000)
+                        Thread.sleep(2000)
+                        println("next player..Bitte :")
                     }
-                    println(
 
-                    )
 
 
                 }
@@ -708,18 +698,36 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     }
 
 
-    //todo gia to poios tha kerdisei
+    //todo wer hat gewonnen
     open fun gewonnen() {
-        Thread.sleep(2000)
-        for (i in 10 downTo 1) {
+        Thread.sleep(9000)
+        for (i in 10 downTo 5 step 2) {
             if (i in 0..5) {
                 println("$i Minuten noch...")
             } else {
                 println("$i Minute noch...")
             }
-            Thread.sleep(4000)
+
         }
-        // println("unsere gewonnen ist : ${Player(aktuelleSpieler)}")
+
+
+    }
+
+    open fun keineLust(){
+        println("Ich habe keine Lust zu zählen.\n" +
+                "Ich bin verwirrt, wenn ich verkehrt herum zähle. ")
+    }
+    open fun gewonnen2() {
+        Thread.sleep(6000)
+        for (i in 1 until  5 ) {
+            if (i in 1..5) {
+                println("$i Minuten noch...")
+            } else {
+                println("$i Minute noch...")
+            }
+
+        }
+
 
     }
 }

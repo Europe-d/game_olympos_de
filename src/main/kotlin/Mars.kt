@@ -12,10 +12,13 @@ open class Mars(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, s
 
     open fun polizei() {
 
-        println("${this.namePlanet}  hat  wieder unsere kometen geärgert .of of  die polizei-UFO kommt wieder ")
+        println("${this.namePlanet}  hat unsere kometen geärgert .of of  die polizei-UFO kommt wieder ")
 
     }
 
+    open fun polizeiWieder() {
+        println("""${this.namePlanet} hat wieder unsere kometen geärgert ...... die Polizisten-UFO  haben die Pommes gerochen ...OO NEIN """.trimMargin())
+    }
 
 }
 

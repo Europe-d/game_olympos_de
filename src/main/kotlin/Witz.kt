@@ -43,7 +43,7 @@ Ich weiß nicht einmal, wie viel ich schulde!!!
     open fun witz4() {
         Thread.sleep(3000)
         println(
-            """unsere ${this.name} hat für uns eine joke zu sagen ...
+            """ ${this.name} : ich bin wieder da ...haben sie mir vermisst ??...
                 
                 Das sind viele Fledermäuse, die in einer Höhle untergebracht sind.
                 Plötzlich betritt eine Fledermaus die Höhle und wird ins Gesicht geschlagen.

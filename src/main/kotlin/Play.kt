@@ -109,7 +109,7 @@ fun main() {
     println()
     println("biete warten ..")
     // todo planet  bewegen...
-    mars.bewegen()
+    neptun.bewegen()
     println()
     venus.bewegenLinks()
 
@@ -131,7 +131,7 @@ fun main() {
     Thread.sleep(5000)
     joker.witz1()
     joker.gerauscht()
-    println("Wenn ich ihn fange, werde ich ihn auf dem Grill zubereiten. ")
+    println("Wenn ich dich fange, ich mache dich Grillen . ")
     println()
     println("pssssssssssss Ruhe , jemand bewegt :")
     //todo planet aktion
@@ -143,28 +143,43 @@ fun main() {
     //aktuellePlayer.name
 //todo eine liste mit name von planet
 
-    var lassPlanet: MutableList<String> =
-        mutableListOf("Mars", "Saturn", "Uranus", "Merkur", "Venus", "Erde", "Neptun", "Jupiter")
+    var lassPlanet: MutableMap<String,Int> =
+        mutableMapOf(
+            "Mars"  to 4,
+            "Saturn" to 6,
+            "Uranus" to 7,
+            "Merkur" to 1,
+            "Venus" to 2,
+            "Erde" to 3,
+            "Neptun" to 8,
+            "Jupiter" to 5)
 
     //todo tritte frage planet ruft
     println()
-
+    mars.polizeiWieder()
 
     if (frage.tritteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
+
+
+    Thread.sleep(5000)
     println("pzzzzzzzziiiiiii....pzzzzziiii")
-    println("ooooo ein Planet  ruft uns an ..wer ist :  von :")
+    println("ooooo ein Planet  ruft uns an ..wer ist : ")
     saturn.luft(mars)
     println()
+    Thread.sleep(5000)
+    println("tok tok ..")
+    println("wer ist wieder ich möchte die vierte Frage stellen ???? ")
+    Thread.sleep(5000)
     joker.witz2()
 
-    lassPlanet.random()
-    println("er sagt Achtung : ")
-    println("Erdbeben, Erdbeben , SOS gerade...")
 
-    Thread.sleep(6000)
+    println(" ${lassPlanet.keys.random()} sagt Achtung : ")
+    println("Erdbeben, SOS , Erdbeben , ...")
+
+    Thread.sleep(5000)
     //todo planet bewegen
     merkur.dunkel()
 
@@ -182,12 +197,14 @@ fun main() {
     println()
     Thread.sleep(5000)
     venus.glamour()
+    joker.gerauscht()
     joker.witz3()
 
     //todo willst du weiter spielen ?
     erde.back()
     println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
     frage.spieleWeiter()
+
 
     //todo fünfte Frage
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
@@ -236,21 +253,35 @@ fun main() {
         println(aktuellePlayer.name)
     }
 
-    venus.bewegen()
-
+    println("die Planeten schicken uns zurück zur Erde, weil sie sich beruhigen wollen  ")
+    println("und natürlich haben wir im Moment keine andere Frage ")
+    println()
+    println("aber........")
+    println()
     println("before wir fertig unsere spiele  wir lesen das letzte witz von : ")
+    joker.gerauscht()
     joker.witz4()
     println("jetzt ...Ich habe dich ..... jetzt wirst du sehen (Here is your end.) ..!!!")
-    println("Danke, dass Sie bis zum Ende gespielen haben. ! sehen wir wer ist gewonnen jetzt :P")
+    println("tzi....tzi... ou u :( ")
+    println()
+    Thread.sleep(5000)
+    println("Danke, dass Sie bis zum Ende gespielen haben. ! wir sehen jetzt wer gewonnen hat :P")
 
 
     //todo  the end
 
     frage.gewonnen()
+    frage.keineLust()
+    frage.gewonnen2()
 
     Thread.sleep(5000)
     spielern[0].playScore()
     spielern[1].playScore()
+    println(
+        """die unsere Planet sind :( ${lassPlanet.keys.sorted()} )
+            |und das Geschenk des Gewinners : ist Natürlich  "POMMES" """.trimMargin())
+
+    println("THE END")
 }
 
 

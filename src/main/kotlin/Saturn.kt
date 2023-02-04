@@ -5,12 +5,12 @@ open class Saturn(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int,
     open fun luft(frage: Planet) {
 
 
-        println("${frage.namePlanet}  : Hey.. du Wie lange bleibt er bei mir? Ich kann ihn nicht mehr ertragen. ")
+        println(": Hey.. ich bin ${frage.namePlanet} ich habe eine info für sie : ")
         if (umlaufgeschwindigkeit >= 3 && frage.umlaufgeschwindigkeit >= 6) {
             println("is ok er kann zurück kommen  ")
 
         } else {
-            println("leider er darf noch nicht spielen  aber es ist okay, lassen Sie ihn gehen. ")
+            println("Saturn hat am Äquator einen Durchmesser von 120.660 km und gehört zu den so genannten Gasriesen. ")
         }
     }
 }
@@ -19,7 +19,7 @@ open class Saturn(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int,
 
 /**
  * Ο Κρόνος είναι ο έκτος πλανήτης σε σχέση με την απόστασή του από τον Ήλιο και ο δεύτερος σε μέγεθος του Ηλιακού συστήματος μετά τον Δία,
- * με διάμετρο στον ισημερινό του 120.660 χιλιόμετρα ενώ ανήκει στους λεγόμενους γίγαντες αερίων. Βικιπαίδεια
+ * με διάμετρο στον ισημερινό του 120.660 χιλιόμετρα ενώ ανήκει στους λεγόμενους γίγαντες αερίων.
  * Ηλικία: 4,503e9 έτη
  * Πυκνότητα: 687 kg/m³
  * Βαρύτητα: 10,44 m/s²
