@@ -3,12 +3,10 @@ open class Uranus(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int,
 
     open fun blauFarbe() {
 
-        println(
-            """ Achtung  ${namePlanet} (Himmel) ist in Bewegung und es gibt eine Menge Nebel ...
+        println(""" Achtung  ${namePlanet} (Himmel) ist in Bewegung und es gibt eine Menge Nebel ...
         Nein, nein, nein, keine Sorge .... es ist der Nebel, der den Himmelsplaneten bedeckt,
         deshalb ist er tiefer blau als Neptun ..
-        Du wirst ein bisschen Blau  sein, aber das ist okay. ---Blue (Da Ba Dee)---Dance ."""
-        )
+        Du wirst ein bisschen Blau  sein, aber das ist okay. ---Blue (Da Ba Dee)---Dance .""")
 
     }
 

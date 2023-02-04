@@ -15,19 +15,16 @@ open class Planet(var namePlanet: String, var umlaufgeschwindigkeit: Double, var
 
     open fun bewegenLinks() {
         this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 3.5)
-        println(
-            "unsere planet  bewegen gerade links weil ${namePlanet}  er dreht sich um die Sonne " +
-                    "mit einer durchschnittlichen Geschwindigkeit ${umlaufgeschwindigkeit} Kilometern pro Sekunde"
-        )
+        println("""unsere planet  bewegen gerade links weil ${namePlanet}  er dreht sich um die Sonne 
+            |mit einer durchschnittlichen Geschwindigkeit ${umlaufgeschwindigkeit} Kilometern pro Sekunde""".trimMargin())
     }
 
     open fun bewegenRecht() {
         this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 4.3)
-        println(
-            "unsere planet  bewegen gerade Recht weil ${namePlanet}  mit einer durchschnittlichen " +
-                    "Geschwindigkeit von  ${umlaufgeschwindigkeit} Kilometern pro Sekunde"
-        )
+        println("""unsere planet  bewegen gerade Recht weil ${namePlanet}  mit einer durchschnittlichen 
+                    Geschwindigkeit von  ${umlaufgeschwindigkeit} Kilometern pro Sekunde""")
     }
+
 
 
 }

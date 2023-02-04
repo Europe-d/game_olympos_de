@@ -11,7 +11,10 @@ open class Jupiter(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int
         )
 
     }
+open fun bin(){
 
+    println("Jupiter : Ich bin der größte Planet des Sonnensystems in Bezug auf Größe und Masse. ho ho ho ..")
+}
 
 }
 
@@ -26,5 +29,5 @@ open class Jupiter(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int
  * Ακτίνα: 69.911 χλμ.
  * Εμφανές μέγεθος (V): -2,2
  * Συντεταγμένες: RA 0h 23m 34s | Απόκ. +1° 16′ 13″
- * Δορυφόροι: Ευρώπη, Γανυμήδης, Ιώ, Καλλιστώ, Αμάλθεια, ΠΕΡΙΣΣΟΤΕΡΑ
+ * Δορυφόροι: Ευρώπη, Γανυμήδης, Ιώ, Καλλιστώ, Αμάλθεια, συνολικά είναι 80
  */

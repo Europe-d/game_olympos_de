@@ -5,12 +5,12 @@ open class Saturn(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int,
     open fun luft(frage: Planet) {
 
 
-        println("${frage.namePlanet} wie lange bleibt er noch  hier  ? ")
+        println("${frage.namePlanet}  : Hey.. du Wie lange bleibt er bei mir? Ich kann ihn nicht mehr ertragen. ")
         if (umlaufgeschwindigkeit >= 3 && frage.umlaufgeschwindigkeit >= 6) {
             println("is ok er kann zurück kommen  ")
 
         } else {
-            println("leider er darf noch nicht spielen .")
+            println("leider er darf noch nicht spielen  aber es ist okay, lassen Sie ihn gehen. ")
         }
     }
 }

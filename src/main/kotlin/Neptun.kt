@@ -2,9 +2,9 @@ class Neptun(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, sate
     Planet(namePlanet = namePlanet, umlaufgeschwindigkeit = umlaufgeschwindigkeit, platz = platz,satelliten = satelliten) {
 
     open fun atmen() {
-        println(
-            """Achtung ... Tragen Sie die Sauerstoffmaske Neptuns Atmosphäre besteht zu 80 % 
-        aus Wasserstoff und zu 19 % aus Helium."""
+        println("""Achtung ... 
+            Tragen Sie die Sauerstoffmaske Neptuns Atmosphäre besteht zu 80 % 
+            aus Wasserstoff und zu 19 % aus Helium."""
         )
 
     }

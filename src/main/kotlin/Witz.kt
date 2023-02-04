@@ -4,10 +4,14 @@ open class Witz(var name: String) {
     open fun witz1() {
         Thread.sleep(3000)
         println(
-            """          unsere ${this.name} hat für uns eine joke zu sagen ...
-                        -Alter, als ich dich und deine Freundin gesehen habe, saht ihr aus wie in einem Märchen..
-                        -Vielen Dank, mein Freund! Welches Märchen?
-                        -Die Schöne und das Monster heheheheh :P :) ."""
+            """unsere ${this.name} hat für uns eine joke zu sagen ...
+                
+- Komm schon, Mann... 
+Ich schulde 359€ für das Haus, 143 für die Nebenkosten, 
+356 für das Auto, 325 für Möbel... 
+Ich weiß nicht einmal, wie viel ich schulde!!! 
+- Hey Mann, kann ich dir helfen? 
+- Können Sie das? - Ja! Sie schulden 1.183 Euro.."""
         )
         Thread.sleep(1000)
     }
@@ -15,11 +19,11 @@ open class Witz(var name: String) {
     open fun witz2() {
         Thread.sleep(3000)
         println(
-            """           unsere ${this.name} hat für uns eine joke zu sagen ...
-                          Der Lehrer sagt zu dem kleinen Toto:
-                         - Wenn du fünf Euro in der einen und zehn Euro in der anderen Tasche hast, was hast du dann, Toto?
-                   
-                         - Wahrscheinlich habe ich die Hosen von jemand anderem, Sir..."""
+            """unsere ${this.name} ist wieder da .. eine joke zu sagen ...
+                
+                Der Lehrer sagt zu dem kleinen Toto:
+                - Wenn du fünf Euro in der einen und zehn Euro in der anderen Tasche hast, was hast du dann, Toto?
+                - Wahrscheinlich habe ich die Hosen von jemand anderem, Sir..."""
         )
         Thread.sleep(1000)
     }
@@ -27,9 +31,11 @@ open class Witz(var name: String) {
     open fun witz3() {
         Thread.sleep(3000)
         println(
-            """          unsere ${this.name} hat für uns eine joke zu sagen ...
-                        -Was willst du jetzt, Eva? - Hilfe Adam, Insel auf den Kykladen mit vier Buchstaben im Akkusativ? 
-                        - Apfel.... - Wirst du mich noch lange schlagen?"""
+            """ooo mein Gott unsere ${this.name} komm wieder  eine joke zu sagen ...
+                
+                Papa, in der Schule nennen sie mich Mafioso..
+                - Okay, ich komme vorbei und kümmere mich darum.
+                - Gut. Lassen Sie es wie einen Unfall aussehen, hm?"""
         )
         Thread.sleep(1000)
     }
@@ -37,14 +43,15 @@ open class Witz(var name: String) {
     open fun witz4() {
         Thread.sleep(3000)
         println(
-            """         unsere ${this.name} hat für uns eine joke zu sagen ...
-                        Das sind viele Fledermäuse, die in einer Höhle untergebracht sind.
-                        Plötzlich betritt eine Fledermaus die Höhle und wird ins Gesicht geschlagen.
+            """unsere ${this.name} hat für uns eine joke zu sagen ...
+                
+                Das sind viele Fledermäuse, die in einer Höhle untergebracht sind.
+                Plötzlich betritt eine Fledermaus die Höhle und wird ins Gesicht geschlagen.
 
-                        - "Woher hast du das ganze Blut?", fragen die anderen sie hungrig.
-                        - "Siehst du das Schloss auf der anderen Seite des Berges?", sagt sie.
-                        -Ja... sagen die anderen Fledermäuse.
-                        -ja gut aber ich habe es nicht gesehen!!!!"""
+                - "Woher hast du das ganze Blut?", fragen die anderen sie hungrig.
+                - "Siehst du das Schloss auf der anderen Seite des Berges?", sagt sie.
+                -Ja... sagen die anderen Fledermäuse.
+                -ja gut aber ich habe es nicht gesehen!!!!"""
         )
         Thread.sleep(1000)
     }

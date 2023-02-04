@@ -6,14 +6,13 @@ open class Mars(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, s
 
         println(
             """UFO sind da... wir dürfen  keine frage jetzt stelle und nicht bewegen ..
-            Erst müssen sie uns kontrollieren..ob wir pommes dabei haben !!!. Hey, du ..${player.name}..versteckst die Kartoffeln."""
-        )
+                |Erst müssen sie uns kontrollieren..ob wir pommes dabei haben !!!. Hey, du ..${player.name}..versteckst die Kartoffeln.""".trimMargin())
     }
 
 
     open fun polizei() {
 
-        println("  ${this.namePlanet}  hat  wieder unsere kometen geärgert .of of  die polizei-UFO kommt wieder ")
+        println("${this.namePlanet}  hat  wieder unsere kometen geärgert .of of  die polizei-UFO kommt wieder ")
 
     }
 

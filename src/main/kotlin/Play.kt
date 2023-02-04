@@ -19,7 +19,7 @@ fun main() {
     println(welcometext1)
 
 
-    //todo hier ich habe meine planete jede class eine var
+    //todo hier ich habe meine Planet jede class eine var
 
     var merkur = Merkur("Merkur", 0.382, 1, 0)
     var venus = Venus("Venus", 0.949, 2, 0)
@@ -30,14 +30,16 @@ fun main() {
     var uranus = Uranus("Uranus", 4.007, 7, 27)
     var neptun = Neptun("Neptun", 3.883, 8, 14)
 
+
+    // todo name von vogel
     var joker = Witz("Spaßvogel")
 
+
+    //todo mit dass rufe ich meine frage
     var frage = Fragen("Moderator", 0)
 
-    // todo hier die user geben irhe name
 
-
-    //todo liste von player 1
+    //todo liste von player 1 und 2
 
     var spielern: MutableList<Player> = mutableListOf()
 
@@ -47,13 +49,18 @@ fun main() {
 
 
     }
+    //todo hier die geben ihre alter
     spielern[0].alterVonplayer1()
     spielern[1].alterVonplayer1()
 
+
+    //todo das ist von die aktuelleplayer weil die würfeln auch
     var gewinner: Player
     var verloren: Player
     var aktuellePlayer: Player
     println()
+
+
     //todo bewegen und vorstellen von user mit jahre
     println("So welcome ${spielern[0].name} und  ${spielern[1].name} bitte fest halten ... ")
 
@@ -91,7 +98,7 @@ fun main() {
     //todo erste frage
 
     if (frage.ersteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
 
     }
@@ -106,52 +113,58 @@ fun main() {
     println()
     venus.bewegenLinks()
 
-
+    Thread.sleep(5000)
     //todo zweite frage
     println()
     println("zweite Frage jetzt können wir weiter spielen:")
 
     if (frage.zweiteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
-    println(aktuellePlayer.name)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
+        println(aktuellePlayer.name)
     }
     println()
 
 
     mars.polizei()
-    println("o mein Gott Vogel ist wieder da... . !!")
-    println("Wenn ich ihn fange, werde ich ihn auf dem Grill zubereiten. ")
+
+
     Thread.sleep(5000)
     joker.witz1()
     joker.gerauscht()
-
+    println("Wenn ich ihn fange, werde ich ihn auf dem Grill zubereiten. ")
     println()
     println("pssssssssssss Ruhe , jemand bewegt :")
     //todo planet aktion
 
     saturn.meteoriten()
+    Thread.sleep(5000)
     uranus.blauFarbe()
 
-    aktuellePlayer.name
+    //aktuellePlayer.name
+//todo eine liste mit name von planet
+
+    var lassPlanet: MutableList<String> =
+        mutableListOf("Mars", "Saturn", "Uranus", "Merkur", "Venus", "Erde", "Neptun", "Jupiter")
 
     //todo tritte frage planet ruft
     println()
 
 
     if (frage.tritteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
     println("pzzzzzzzziiiiiii....pzzzzziiii")
-    println("ooooo ein Planet  ruft uns an ..wer ist :  ..ooo Esel ruft von :")
+    println("ooooo ein Planet  ruft uns an ..wer ist :  von :")
     saturn.luft(mars)
     println()
-    println("oooo bitte warten zeit zum lachen !!!")
     joker.witz2()
 
-    println("Erdbeben gerade...")
+    lassPlanet.random()
+    println("er sagt Achtung : ")
+    println("Erdbeben, Erdbeben , SOS gerade...")
 
-
+    Thread.sleep(6000)
     //todo planet bewegen
     merkur.dunkel()
 
@@ -162,12 +175,12 @@ fun main() {
 
 
     if (frage.vierteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
 
     println()
-    println("oh nein ..nicht wieder .. ")
+    Thread.sleep(5000)
     venus.glamour()
     joker.witz3()
 
@@ -180,40 +193,46 @@ fun main() {
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
 
     if (frage.feunfteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
     println()
+    Thread.sleep(5000)
     venus.bewegen()
     println()
     jupiter.masseVonDias()
     println()
+
+
     // todo sechste Frage
-
-
     if (frage.sechsteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
+    Thread.sleep(5000)
     uranus.platz
     saturn.meteoriten()
 
     println()
     neptun.bewegen()
+    jupiter.bin()
+    Thread.sleep(5000)
 
 
     //todo siebte Frage
     if (frage.siebteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
 
     merkur.umlaufgeschwindigkeit
     neptun.atmen()
+    Thread.sleep(5000)
+
 
     //todo achte Frage
     if (frage.achteFrage(aktuellePlayer) == false) {
-        aktuellePlayer = wechselSpieler(aktuellePlayer,spielern)
+        aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
 
@@ -225,10 +244,11 @@ fun main() {
     println("Danke, dass Sie bis zum Ende gespielen haben. ! sehen wir wer ist gewonnen jetzt :P")
 
 
-
     //todo  the end
 
     frage.gewonnen()
+
+    Thread.sleep(5000)
     spielern[0].playScore()
     spielern[1].playScore()
 }
@@ -262,11 +282,11 @@ fun anakatema(player1: Player, player2: Player): Player {
     return gewinner
 }
 
-fun wechselSpieler(aktuellespielern : Player,spielern :MutableList<Player>): Player{
+fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Player {
 
-    if(aktuellespielern == spielern[0] ){
+    if (aktuellespielern == spielern[0]) {
         return spielern[1]
-    }else{
+    } else {
         return spielern[0]
     }
 

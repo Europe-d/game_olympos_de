@@ -5,5 +5,6 @@ open class Erde(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, s
     open fun back() {
 
         println("THIS Planet ${this.namePlanet} sagt : PLEASE COME BACK")
+        readln()
     }
 }
