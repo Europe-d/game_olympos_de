@@ -700,14 +700,14 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
     //todo wer hat gewonnen
     open fun gewonnen() {
-        Thread.sleep(9000)
+        Thread.sleep(10000)
         for (i in 10 downTo 1 ) {
             if (i in 0..5) {
                 println("$i Minuten noch...")
             } else {
                 println("$i Minute noch...")
             }
-
+            Thread.sleep(2000)
         }
 
 

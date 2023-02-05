@@ -280,9 +280,9 @@ fun main() {
 
 
     //todo  the end
-    Thread.sleep(20000)
+    Thread.sleep(30000)
     frage.gewonnen()
-    Thread.sleep(2000)
+    Thread.sleep(5000)
 
     spielern[0].playScore()
     spielern[1].playScore()
