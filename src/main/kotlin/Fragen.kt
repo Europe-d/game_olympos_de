@@ -710,7 +710,6 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             Thread.sleep(2000)
         }
 
-
     }
 
 
