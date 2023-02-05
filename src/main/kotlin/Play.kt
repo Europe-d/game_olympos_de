@@ -283,10 +283,6 @@ fun main() {
     Thread.sleep(20000)
     frage.gewonnen()
     Thread.sleep(2000)
-    frage.keineLust()
-    Thread.sleep(2000)
-    frage.gewonnen2()
-
 
     spielern[0].playScore()
     spielern[1].playScore()

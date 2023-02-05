@@ -701,7 +701,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     //todo wer hat gewonnen
     open fun gewonnen() {
         Thread.sleep(9000)
-        for (i in 10 downTo 5 step 2) {
+        for (i in 10 downTo 1 ) {
             if (i in 0..5) {
                 println("$i Minuten noch...")
             } else {
@@ -713,21 +713,6 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
     }
 
-    open fun keineLust(){
-        println("Ich habe keine Lust zu zählen.\n" +
-                "Ich bin verwirrt, wenn ich verkehrt herum zähle. ")
-    }
-    open fun gewonnen2() {
-        Thread.sleep(6000)
-        for (i in 1 until  5 ) {
-            if (i in 1..5) {
-                println("$i Minuten noch...")
-            } else {
-                println("$i Minute noch...")
-            }
-
-        }
 
 
-    }
 }
