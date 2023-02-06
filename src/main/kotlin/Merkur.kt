@@ -5,10 +5,9 @@ open class Merkur(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int,
     open fun dunkel() {
 
         println(
-            """${namePlanet} oooo nein ist Dunkel geworden  
-             Eine volle Umrundung der Sonne 
-             (mit einer durchschnittlichen Geschwindigkeit von 48 Kilometern pro Sekunde)
-              dauert nur 88 Erdtage.""".trimMargin()
+            """${namePlanet} oooo nein ist Dunkel geworden aber before ich schlafe ich habe  info für dich  : 
+             Eine volle Umrundung der Sonne mit einer durchschnittlichen Geschwindigkeit von 48 Kilometern pro Sekunde 
+             das für unsere Erde dauert nur 88 tage.""".trimMargin()
         )
 
     }

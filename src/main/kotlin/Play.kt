@@ -44,12 +44,8 @@ fun main() {
             )
     // todo name von vogel
     var joker = Witz("Spaßvogel")
-
-
     //todo mit dass rufe ich meine frage
     var frage = Fragen("Moderator", 0)
-
-
     //todo liste von player 1 und 2
 
     var spielern: MutableList<Player> = mutableListOf()
@@ -57,17 +53,11 @@ fun main() {
     for (i in 1..2) {
         println("Bitte geben Sie den Name des $i Spieler ein : ")
         spielern.add(Player(readln(), 0))
-
-
     }
-
-
-
 
     //todo hier die geben ihre alter
     spielern[0].alterVonplayer1()
     spielern[1].alterVonplayer1()
-
 
     //todo das ist von die aktuelleplayer weil die würfeln auch
     var gewinner: Player
@@ -75,17 +65,15 @@ fun main() {
     var aktuellePlayer: Player
     println()
 
-
     //todo bewegen und vorstellen von user mit jahre
     println("So welcome ${spielern[0].name} und  ${spielern[1].name} bitte fest halten ... ")
-
     saturn.bewegen()
 
     //todo ersten wir würfeln dann wir anschaeun wer spielen anfagen
     println()
-    println("wer anfange ersten ? xmmm ")
-    Thread.sleep(2000)
-    gewinner = anakatema(spielern[0], spielern[1])
+    println(".. wer als Erster mit den Würfeln beginnt.")
+    Thread.sleep(4000)
+    gewinner = wuerfeln(spielern[0], spielern[1])
     aktuellePlayer = gewinner
     if (spielern[0] == gewinner) {
         verloren = spielern[1]
@@ -94,19 +82,17 @@ fun main() {
 
     }
     println()
-
+    Thread.sleep(3000)
 
     println("wir anfangen mit erste frage...oou oou oou .. ")
-    Thread.sleep(1000)
+    Thread.sleep(2000)
     mars.bewegen()
-    Thread.sleep(1000)
+    Thread.sleep(2000)
     mars.nichtBewegen(spielern[0])
-
-
-
 
     println("i see you ..")
     Thread.sleep(2000)
+
     println("jetzt dürfen wir die frage stellen")
     println()
     Thread.sleep(5000)
@@ -120,7 +106,7 @@ fun main() {
 
 
 
-
+    Thread.sleep(5000)
     println()
     println("biete warten ..")
     // todo planet  bewegen...
@@ -141,23 +127,20 @@ fun main() {
 
 
     mars.polizei()
-
-
     Thread.sleep(5000)
+
     joker.witz1()
     joker.gerauscht()
+
     println("Wenn ich dich fange, ich mache dich Grillen . ")
+    Thread.sleep(5000)
     println()
     println("pssssssssssss Ruhe , jemand bewegt :")
-    //todo planet aktion
 
+    //todo planet aktion
     saturn.meteoriten()
     Thread.sleep(5000)
     uranus.blauFarbe()
-
-    //aktuellePlayer.name
-//todo eine liste mit name von planet
-
 
 
 
@@ -194,7 +177,7 @@ fun main() {
     //todo planet bewegen
     merkur.dunkel()
 
-
+    Thread.sleep(5000)
     //todo vierte  frage 3 witz
     println()
     println("ooookkkk ...wo wir geblieben ....cool .. ich bin neugierig  was du antworten")
@@ -209,6 +192,7 @@ fun main() {
     Thread.sleep(5000)
     venus.glamour()
     joker.gerauscht()
+    Thread.sleep(5000)
     joker.witz3()
 
     //todo willst du weiter spielen ?
@@ -219,7 +203,7 @@ fun main() {
 
     //todo fünfte Frage
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
-
+    Thread.sleep(5000)
     if (frage.feunfteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -230,7 +214,7 @@ fun main() {
     println()
     jupiter.masseVonDias()
     println()
-
+    Thread.sleep(5000)
 
     // todo sechste Frage
     if (frage.sechsteFrage(aktuellePlayer) == false) {
@@ -252,7 +236,7 @@ fun main() {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
-
+    Thread.sleep(5000)
     merkur.umlaufgeschwindigkeit
     neptun.atmen()
     Thread.sleep(5000)
@@ -263,31 +247,39 @@ fun main() {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
-
+    Thread.sleep(5000)
     println("die Planeten schicken uns zurück zur Erde, weil sie sich beruhigen wollen  ")
     println("und natürlich haben wir im Moment keine andere Frage ")
     println()
     println("aber........")
     println()
-    println("before wir fertig unsere spiele  wir lesen das letzte witz von : ")
+    Thread.sleep(5000)
     joker.gerauscht()
     joker.witz4()
+    Thread.sleep(5000)
     println("jetzt ...Ich habe dich ..... jetzt wirst du sehen (Here is your end.) ..!!!")
     println("tzi....tzi... ou u :( ")
+    Thread.sleep(2000)
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println("Danke, dass Sie bis zum Ende gespielen haben. ! wir sehen jetzt wer gewonnen hat :P")
 
 
     //todo  the end
-    Thread.sleep(30000)
+    Thread.sleep(5000)
     frage.gewonnen()
     Thread.sleep(5000)
 
     spielern[0].playScore()
     spielern[1].playScore()
 
+if(spielern[0].playScore() ==  spielern[1].playScore()){
+    println("unsere playern haben gleich punkte deswegen wir würfeln noch ein mal " +
+            "und sehen uns wer ist der gewonnen ")
+    wuerfeln2(spielern[0],spielern[1])
 
+
+}
     println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
 
 
@@ -300,7 +292,7 @@ fun main() {
 }
 
 
-fun anakatema(player1: Player, player2: Player): Player {
+fun wuerfeln(player1: Player, player2: Player): Player {
 
     var gewinner = player1
 
@@ -322,7 +314,35 @@ fun anakatema(player1: Player, player2: Player): Player {
 
     } else {
         println("versuchen sie wieder ")
-        anakatema(player1, player2)
+        wuerfeln(player1, player2)
+
+    }
+    return gewinner
+}
+
+fun wuerfeln2(player1: Player, player2: Player): Player {
+
+    var gewinner: Player = player1
+
+    var player1Roll = Random.nextInt(1, 6)
+    println("${player1.name}: Du hast  $player1Roll gewürfelt")
+    var player1Roll2 = Random.nextInt(1, 6)
+    println("${player2.name}: Du hast  $player1Roll2 gewürfelt")
+
+
+    if (player1Roll > player1Roll2) {
+        gewinner = player1
+        println("${player1.name} noch ein punkte dazu .. du hast gewonnen ")
+
+
+    } else if (player1Roll < player1Roll2) {
+        gewinner = player2
+        println("${player2.name} noch ein punkte dazu .. du hast gewonnen ")
+
+
+    } else {
+        println("echt jetzt : versuchen sie wieder ")
+        wuerfeln(player1, player2)
 
     }
     return gewinner
