@@ -21,7 +21,7 @@ open class Witz(var name: String) {
                 
                 Der Lehrer sagt zu dem kleinen Toto:
                 - Wenn du fünf Euro in der Tasche hast und zehn Euro in der anderen Tasche hast, was hast du dann, Toto?
-                - Wahrscheinlich habe ich die Hosen von jemand anderem, Sir..."""
+                - Wahrscheinlich die Hose von jemand anderem.  Sir..."""
         )
         Thread.sleep(5000)
     }

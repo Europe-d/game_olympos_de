@@ -31,17 +31,17 @@ fun main() {
     var neptun = Neptun("Neptun", 3.883, 8, 14)
 
 
-    var lassPlanet: MutableMap<String,Int> =
+    var lassPlanet: MutableMap<String, Int> =
         mutableMapOf(
             "Merkur" to 1,
             "Venus" to 2,
             "Erde" to 3,
-            "Mars"  to 4,
+            "Mars" to 4,
             "Jupiter" to 5,
             "Saturn" to 6,
             "Uranus" to 7,
             "Neptun" to 8,
-            )
+        )
     // todo name von vogel
     var joker = Witz("Spaßvogel")
     //todo mit dass rufe ich meine frage
@@ -85,20 +85,20 @@ fun main() {
     Thread.sleep(3000)
 
     println("wir anfangen mit erste frage...oou oou oou .. ")
-    Thread.sleep(2000)
+
     mars.bewegen()
     Thread.sleep(2000)
     mars.nichtBewegen(spielern[0])
 
     println("i see you ..")
-    Thread.sleep(2000)
+    Thread.sleep(5000)
 
     println("jetzt dürfen wir die frage stellen")
     println()
     Thread.sleep(5000)
     //todo erste frage
 
-    if (frage.ersteFrage(aktuellePlayer) == false) {
+    if (!frage.ersteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
 
@@ -119,7 +119,7 @@ fun main() {
     println()
     println("zweite Frage jetzt können wir weiter spielen:")
 
-    if (frage.zweiteFrage(aktuellePlayer) == false) {
+    if (!frage.zweiteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
@@ -127,6 +127,7 @@ fun main() {
 
 
     mars.polizei()
+    joker.gerauscht()
     Thread.sleep(5000)
 
     joker.witz1()
@@ -143,16 +144,11 @@ fun main() {
     uranus.blauFarbe()
 
 
-
-
-
-
-
     //todo tritte frage planet ruft
     println()
     mars.polizeiWieder()
 
-    if (frage.tritteFrage(aktuellePlayer) == false) {
+    if (!frage.tritteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
@@ -183,7 +179,7 @@ fun main() {
     println("ooookkkk ...wo wir geblieben ....cool .. ich bin neugierig  was du antworten")
 
 
-    if (frage.vierteFrage(aktuellePlayer) == false) {
+    if (!frage.vierteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
@@ -273,20 +269,23 @@ fun main() {
     spielern[0].playScore()
     spielern[1].playScore()
 
-if(spielern[0].playScore() ==  spielern[1].playScore()){
-    println("unsere playern haben gleich punkte deswegen wir würfeln noch ein mal " +
-            "und sehen uns wer ist der gewonnen ")
-    wuerfeln2(spielern[0],spielern[1])
+    if (spielern[0].playScore() == spielern[1].playScore()) {
+        println(
+            "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
+                    "um zu sehen wer der Gewinner ist : "
+        )
+        wuerfeln2(spielern[0], spielern[1])
 
 
-}
+    }
     println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
 
 
     println(
         """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
             |
-            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin())
+            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
+    )
 
     println("                                                       THE END")
 }

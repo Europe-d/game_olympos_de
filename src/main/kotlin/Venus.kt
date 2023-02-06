@@ -1,15 +1,19 @@
 open class Venus(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, satelliten: Int) :
-    Planet(namePlanet = namePlanet, umlaufgeschwindigkeit = umlaufgeschwindigkeit, platz = platz,satelliten = satelliten) {
+    Planet(
+        namePlanet = namePlanet,
+        umlaufgeschwindigkeit = umlaufgeschwindigkeit,
+        platz = platz,
+        satelliten = satelliten
+    ) {
 
 
     open fun glamour() {
 
-        println("""Achtung ..... die schönste ....komm....
-            ___ what ?? ...!!! nein nein was für frau 
-            ich spreche von planet Afroditi ...naja du hast recht das ist auch Weiblich Achtung...
-            
-            Die Venus ist der am zweitweitesten von der Sonne entfernte Planet in unserem Sonnensystem. 
-            Er ist nach dem Mond das hellste Objekt am Nachthimmel..""".trimMargin())
+        println(
+            """Achtung die schönste ....komm....what ?? 
+ich spreche von planet Venus ...ist der am zweitweitesten von der Sonne entfernte Planet in unserem Sonnensystem. 
+Er ist nach dem Mond das hellste Objekt am Nachthimmel..""".trimMargin()
+        )
     }
 
 

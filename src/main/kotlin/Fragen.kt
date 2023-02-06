@@ -9,12 +9,11 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     // TODO  erste Runde
     open fun ersteFrage(player: Player): Boolean {
 
-        println("""mit einem Notfallrucksack für wie viele Stunden man 
-            |kann ohne Probleme überleben, indem man einen festen Punkt ansteuert?""".trimMargin()
+        println("""Welcher  Astronomin entdeckte die Zusammensetzung der Sonne??""".trimMargin()
         )
-        println(" A) 42 ")
-        println(" B) 72 ")
-        println(" C) 84 ")
+        println(" A) Platon Porezki")
+        println(" B) Cecilia Payne")
+        println(" C) Agrippa Bithynios")
         try {
 
             val frageMitNummer1 = "A"
@@ -53,7 +52,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println("""oooooo nein ...sie haben false antworten.. in 3 sekunde  Sie werden Eiswürfel..
                         | wir sendet dich bei planet Mars du bis aus.""".trimMargin()
                     )
-                    richtigeAntwort = false
+                    this.richtigeAntwort = false
                     for (i in 3 downTo 1) {
                         if (i in 0..ersteAntwort.length) {
                             println("$i sekunde noch...")
@@ -331,12 +330,12 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
     // TODO  play weiter yes or no
     open fun spieleWeiter() {
-        val antworten = readln().trim()
 
-        when (antworten) {
-            "Nein" -> {
+        when (readln().trim().uppercase()) {
+            "NEIN" -> {
                 println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
                 exitProcess(0)
+
             }
         }
     }

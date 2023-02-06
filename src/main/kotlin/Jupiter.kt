@@ -1,20 +1,25 @@
 open class Jupiter(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, satelliten: Int) :
-    Planet(namePlanet = namePlanet, umlaufgeschwindigkeit = umlaufgeschwindigkeit, platz = platz,satelliten = satelliten) {
-
+    Planet(
+        namePlanet = namePlanet,
+        umlaufgeschwindigkeit = umlaufgeschwindigkeit,
+        platz = platz,
+        satelliten = satelliten
+    ) {
 
 
     open fun masseVonDias() {
 
         println(
-            """  ${namePlanet} Seine Masse ist 318-mal so groß wie die der Erde und 2,5-mal so groß
-             wie die aller Planeten und Satelliten. Sein Volumen ist 1.321 Mal so groß wie das der Erde"""
+            """ ${namePlanet} : hat für uns ein info, Seine Masse ist 318-mal so groß wie die der Erde und 2,5-mal so groß
+wie die aller Planeten und Satelliten. Sein Volumen ist 1.321 Mal so groß wie das der Erde"""
         )
 
     }
-open fun bin(){
 
-    println("Jupiter : Ich bin der größte Planet des Sonnensystems in Bezug auf Größe und Masse. ho ho ho ..")
-}
+    open fun bin() {
+
+        println("Jupiter : Ich bin der größte Planet des Sonnensystems in Bezug auf Größe und Masse. ho ho ho ..")
+    }
 
 }
 

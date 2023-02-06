@@ -1,5 +1,6 @@
-class Neptun(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, satelliten: Int) :
+open class Neptun(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, satelliten: Int) :
     Planet(namePlanet = namePlanet, umlaufgeschwindigkeit = umlaufgeschwindigkeit, platz = platz,satelliten = satelliten) {
+
 
     open fun atmen() {
         println("""Achtung ... 
