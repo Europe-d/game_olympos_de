@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 open class Fragen(name: String, score: Int) : Player(name, score) {
 
 
@@ -347,12 +349,12 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
     // TODO  play weiter yes or no
     open fun spieleWeiter() {
-        val antworten = readLine()!!.trim()
+        val antworten = readln().trim()
 
         when (antworten) {
             "Nein" -> {
                 println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
-                System.exit(0)
+                exitProcess(0)
             }
         }
     }
