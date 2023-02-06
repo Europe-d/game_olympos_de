@@ -9,8 +9,9 @@ open class Player(var name: String) {
     }
 
 
-    fun playScore() {
+    fun playScore(): Int {
         println("$name has $score points.")
+        return score
     }
 
 

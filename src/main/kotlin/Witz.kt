@@ -2,34 +2,31 @@ open class Witz(var name: String) {
 
 
     open fun witz1() {
-        Thread.sleep(3000)
+
         println(
             """unsere ${this.name} hat für uns eine joke zu sagen ...
-                
-- Komm schon, Mann... 
-Ich schulde 359€ für das Haus, 143 für die Nebenkosten, 
-356 für das Auto, 325 für Möbel... 
-Ich weiß nicht einmal, wie viel ich schulde!!! 
-- Hey Mann, kann ich dir helfen? 
-- Können Sie das? - Ja! Sie schulden 1.183 Euro.."""
+                - Komm schon, Mann... 
+                Ich schulde 359€ für das Haus, 143 für die Nebenkosten, 
+                356 für das Auto, 325 für Möbel... 
+                Ich weiß nicht mehr, wie viel ich schulde!!! 
+                - Hey Mann, kann ich dir helfen? 
+                - echt kannst du  das? - Ja! du schuldest  1.183 Euro.."""
         )
-        Thread.sleep(1000)
+        Thread.sleep(5000)
     }
 
     open fun witz2() {
-        Thread.sleep(3000)
         println(
             """unsere ${this.name} ist wieder da .. eine joke zu sagen ...
                 
                 Der Lehrer sagt zu dem kleinen Toto:
-                - Wenn du fünf Euro in der einen und zehn Euro in der anderen Tasche hast, was hast du dann, Toto?
+                - Wenn du fünf Euro in der Tasche hast und zehn Euro in der anderen Tasche hast, was hast du dann, Toto?
                 - Wahrscheinlich habe ich die Hosen von jemand anderem, Sir..."""
         )
-        Thread.sleep(1000)
+        Thread.sleep(5000)
     }
 
     open fun witz3() {
-        Thread.sleep(3000)
         println(
             """ooo mein Gott unsere ${this.name} komm wieder  eine joke zu sagen ...
                 
@@ -37,11 +34,10 @@ Ich weiß nicht einmal, wie viel ich schulde!!!
                 - Okay, ich komme vorbei und kümmere mich darum.
                 - Gut. Lassen Sie es wie einen Unfall aussehen, hm?"""
         )
-        Thread.sleep(1000)
+        Thread.sleep(5000)
     }
 
     open fun witz4() {
-        Thread.sleep(3000)
         println(
             """ ${this.name} : ich bin wieder da ...haben sie mir vermisst ??...
                 
@@ -53,11 +49,11 @@ Ich weiß nicht einmal, wie viel ich schulde!!!
                 -Ja... sagen die anderen Fledermäuse.
                 -ja gut aber ich habe es nicht gesehen!!!!"""
         )
-        Thread.sleep(1000)
+        Thread.sleep(5000)
     }
 
 
     open fun gerauscht() {
-        println("trillern....trillern.......tziou tziou .. ")
+        println("trillern....trillern......twit, twit).. ")
     }
 }
