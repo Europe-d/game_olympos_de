@@ -264,14 +264,14 @@ fun main() {
     println("die Planeten schicken uns zurück zur Erde, weil sie sich beruhigen wollen  ")
     println("und natürlich haben wir im Moment keine andere Frage ")
     println()
-    println("aber........")
-    println()
+
     Thread.sleep(5000)
     joker.gerauscht()
     joker.witz4()
+    joker.gerauscht()
     Thread.sleep(5000)
-    println("jetzt ...Ich habe dich ..... jetzt wirst du sehen (Here is your end.) ..!!!")
-    println("tzi....tzi... ou u :( ")
+    println("jetzt komm ..hier.. jetzt wirst du sehen (Here is your end.) ..!!!")
+    println("trillern....trillern.. ")
     Thread.sleep(2000)
     println()
     Thread.sleep(2000)
@@ -283,10 +283,23 @@ fun main() {
     frage.gewonnen()
     Thread.sleep(5000)
 
-    spielern[0].playScore()
-    spielern[1].playScore()
+    //spielern[0].playScore()
+    //spielern[1].playScore()
 
-    if (spielern[0].playScore() == spielern[1].playScore()) {
+    var playAgain1 = spielern[0].playScore()
+    var playAgain2 = spielern[1].playScore()
+
+//    if (spielern[0].playScore() == spielern[1].playScore()) {
+//        println(
+//            "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
+//                    "um zu sehen wer der Gewinner ist : "
+//        )
+//        wuerfeln2(spielern[0], spielern[1])
+//
+//
+//    }
+
+    if (playAgain1 == playAgain2) {
         println(
             "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
                     "um zu sehen wer der Gewinner ist : "
@@ -346,13 +359,6 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
     var player1Roll2 = Random.nextInt(1, 6)
     println("${player2.name}: Du hast  $player1Roll2 gewürfelt")
 
-    val saveScore = (wuerfeln2(player1, player2))
-    val filePath = buildString {
-        append("game_olympos_de/scoreplayer.tsv")
-    }
-    val saveFile = File(filePath)
-
-    speichernScore(filePath)
 
     if (player1Roll > player1Roll2) {
         gewinner = player1
@@ -385,7 +391,13 @@ fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Pla
 }
 
 
-fun speichernScore(filepath: String) {
-    val saveScore = File(filepath)
-    saveScore.appendText("Player\tspeichernScore\n")
-}
+//fun speichernScore(filepath: String) {
+//    val saveScore = File(filepath)
+//    saveScore.appendText("Player\tspeichernScore\n")
+//
+//speichernScore(filePath)
+//val saveScore = (wuerfeln2(player1, player2))
+//val filePath = buildString {
+//    append("game_olympos_de/scoreplayer.tsv")
+//    val saveFile = File(filePath)
+//    saveFile.writeText("scoreplayer"+gewinner)}
