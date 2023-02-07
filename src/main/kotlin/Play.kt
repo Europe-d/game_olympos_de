@@ -94,11 +94,11 @@ fun main() {
 
     println("i see you ..")
     println()
-    Thread.sleep(6000)
+    Thread.sleep(2000)
 
     println("jetzt dürfen wir die frage stellen")
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     //todo erste frage
 
     if (!frage.ersteFrage(aktuellePlayer)) {
@@ -109,7 +109,7 @@ fun main() {
 
 
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println()
     println("biete warten ..")
     // todo planet  bewegen...
@@ -120,7 +120,7 @@ fun main() {
     println()
     venus.bewegenLinks()
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     //todo zweite frage
     println()
     println("zweite Frage jetzt können wir weiter spielen:")
@@ -139,18 +139,18 @@ fun main() {
 
 
     joker.witz1()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     joker.gerauscht()
 
     println("Wenn ich dich fange, ich mache dich Grillen . ")
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println()
     println("pssssssssssss Ruhe , jemand bewegt :")
 
     //todo planet aktion
     saturn.meteoriten()
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     uranus.blauFarbe()
 
 
@@ -166,15 +166,15 @@ fun main() {
     }
 
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println("pzzzzzzzziiiiiii....pzzzzziiii")
     println("ooooo ein Planet  ruft uns an ..wer ist : ")
     saturn.luft(mars)
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println("tok tok ..")
     println("wer ist wieder ich möchte die vierte Frage stellen ???? ")
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     joker.gerauscht()
     joker.witz2()
     joker.gerauscht()
@@ -183,11 +183,11 @@ fun main() {
     println(" ${lassPlanet.keys.random()} sagt Achtung : ")
     println("Erdbeben, SOS , Erdbeben , ...")
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     //todo planet bewegen
     merkur.dunkel()
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     //todo vierte  frage 3 witz
     println()
     println("ooookkkk ...wo wir geblieben ....cool .. ich bin neugierig  was du antworten")
@@ -199,10 +199,10 @@ fun main() {
     }
 
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     venus.glamour()
     joker.gerauscht()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     joker.witz3()
     println()
     joker.gerauscht()
@@ -216,32 +216,32 @@ fun main() {
 
     //todo fünfte Frage
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     if (frage.feunfteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     venus.bewegen()
     println()
     jupiter.masseVonDias()
     println()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
 
     // todo sechste Frage
     if (frage.sechsteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     uranus.platz
     saturn.meteoriten()
 
     println()
     neptun.bewegen()
     jupiter.bin()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
 
 
     //todo siebte Frage
@@ -249,10 +249,10 @@ fun main() {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     merkur.umlaufgeschwindigkeit
     neptun.atmen()
-    Thread.sleep(5000)
+    Thread.sleep(2000)
 
 
     //todo achte Frage
@@ -260,21 +260,21 @@ fun main() {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     println("die Planeten schicken uns zurück zur Erde, weil sie sich beruhigen wollen  ")
     println("und natürlich haben wir im Moment keine andere Frage ")
     println()
 
-    Thread.sleep(5000)
+    Thread.sleep(2000)
     joker.gerauscht()
     joker.witz4()
     joker.gerauscht()
-    Thread.sleep(5000)
+    Thread.sleep(4000)
     println("jetzt komm ..hier.. jetzt wirst du sehen (Here is your end.) ..!!!")
     println("trillern....trillern.. ")
-    Thread.sleep(2000)
+    Thread.sleep(1000)
     println()
-    Thread.sleep(2000)
+    Thread.sleep(1000)
     println("Danke, dass Sie bis zum Ende gespielen haben. ! wir sehen jetzt wer gewonnen hat :P")
 
 
