@@ -5,12 +5,9 @@ open class Witz(var name: String) {
 
         println(
             """unsere ${this.name} hat für uns eine joke zu sagen ...
-                - Komm schon, Mann... 
-                Ich schulde 359€ für das Haus, 143 für die Nebenkosten, 
-                356 für das Auto, 325 für Möbel... 
-                Ich weiß nicht mehr, wie viel ich schulde!!! 
-                - Hey Mann, kann ich dir helfen? 
-                - echt kannst du  das? - Ja! du schuldest  1.183 Euro.."""
+                -Sagt ein Clown zu seiner Mutter: 
+                "Du Mama, alle sagen, ich hätte zu große Füße." 
+                Mutter: "Ach so ein Quatsch, jetzt stell deine Schuhe in die Garage und komm rein.""""
         )
         Thread.sleep(5000)
     }
@@ -57,3 +54,13 @@ open class Witz(var name: String) {
         println("trillern....trillern......twit, twit).. ")
     }
 }
+
+/**
+ * Fritzchen fragt seinen Lehrer:
+ * "Kann man für etwas bestraft werden, was man nicht gemacht hat?"
+ * "Nein natürlich nicht." "Gut, ich habe nämlich meine Hausaufgaben nicht gemacht!"
+ */
+
+/**
+ *
+ */

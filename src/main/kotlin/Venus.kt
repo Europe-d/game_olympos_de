@@ -9,8 +9,8 @@ open class Venus(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, 
 
     open fun glamour() {
 
-        println("""Achtung die Venus ist mit einer durchschnittlichen Sonnenentfernung von 108 Millionen Kilometern der
-zweitinnerste und mit einem Durchmesser von ca. 12.100 Kilometern der drittkleinste Planet des Sonnensystems.""".trimMargin())
+        println("""Achtung die Venus ist der Planet, der auf seiner Umlaufbahn der Erdbahn 
+mit einem minimalen Abstand von 38 Millionen Kilometern am nächsten kommt. """.trimMargin())
     }
 
 

@@ -9,7 +9,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     // TODO  erste Runde
     open fun ersteFrage(player: Player): Boolean {
 
-        println("""Welcher  Astronomin entdeckte die Zusammensetzung der Sonne??""".trimMargin()
+        println(
+            """Welcher  Astronomin entdeckte die Zusammensetzung der Sonne??""".trimMargin()
         )
         println(" A) Platon Porezki")
         println(" B) Cecilia Payne")
@@ -23,7 +24,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
             when (val ersteAntwort = readln().uppercase()) {
                 frageMitNummer1 -> {
-                    println("""oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden Eiswürfel ..
+                    println(
+                        """oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden Eiswürfel ..
                         |wir sendet dich bei planet Mars du bis aus ... """.trimMargin()
                     )
                     richtigeAntwort = false
@@ -49,7 +51,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer3 -> {
-                    println("""oooooo nein ...sie haben false antworten.. in 3 sekunde  Sie werden Eiswürfel..
+                    println(
+                        """oooooo nein ...sie haben false antworten.. in 3 sekunde  Sie werden Eiswürfel..
                         | wir sendet dich bei planet Mars du bis aus.""".trimMargin()
                     )
                     this.richtigeAntwort = false
@@ -106,7 +109,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             val antwortZweite: String = zweiteAntwort
             when (antwortZweite) {
                 frageMitNummer4 -> {
-                    println("""perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
+                    println(
+                        """perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
 
                     )
                     richtigeAntwort = true
@@ -115,7 +119,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer5 -> {
-                    println("""tut es mir leid,Sie haben falsch geantwortet. 
+                    println(
+                        """tut es mir leid,Sie haben falsch geantwortet. 
                             Sie werden in 3 sekunde eine Esel ...und bleiben sie in Erde  bis next rude """
                     )
                     richtigeAntwort = false
@@ -135,7 +140,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer6 -> {
-                    println("""tut es mir leid,Sie haben falsch geantwortet. 
+                    println(
+                        """tut es mir leid,Sie haben falsch geantwortet. 
                             |Sie werden in 3 sekunde eine Esel ...und bleiben sie in Mars  bis next rude  :) """.trimMargin()
                     )
                     richtigeAntwort = false
@@ -188,7 +194,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             val antwortTritte: String = tritteAntwort
             when (antwortTritte) {
                 frageMitNummer7 -> {
-                    println(""",..echt jetzt ..
+                    println(
+                        """,..echt jetzt ..
                         |hallooooo ersten muss tu rücksack kaufen ..aber ok ich lasse dich weil du  sympatisch bist.
                         |Ich verschenken dir ein punkte :) :) hhehehehe.""".trimMargin()
                     )
@@ -213,7 +220,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer9 -> {
-                    println("""echt jetzt ... Hallooooo ersten muss tu rucksack kaufen  :) :) hhehehehe.
+                    println(
+                        """echt jetzt ... Hallooooo ersten muss tu rucksack kaufen  :) :) hhehehehe.
                         |das geld  ich ..... . :O  :( ooo nein, einen Dieb ist da .""".trimMargin()
                     )
                     richtigeAntwort = false
@@ -226,8 +234,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         }
                         Thread.sleep(2000)
                     }
-                    println("""und jetzt was hast du verstanden .. wir sind beide ohne geld geblieben ... pfff 
-                        |und keine pommes  essen ??!! ..hat uns beiden geklaut  :( du bist aus ... """.trimMargin())
+                    println(
+                        """und jetzt was hast du verstanden .. wir sind beide ohne geld geblieben ... pfff 
+                        |und keine pommes  essen ??!! ..hat uns beiden geklaut  :( du bist aus ... """.trimMargin()
+                    )
                     println("next player..Bitte")
 
                     Thread.sleep(2000)
@@ -253,12 +263,13 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     //todo  vierte Runde
     open fun vierteFrage(player: Player): Boolean {
         print("jetzt sehen uns etwas andere ...  ")
-        println("""Wer ist der Satellit der Erde? ? !!""".trimMargin()
+        println(
+            """Wer ist der Satellit der Erde? ? !!""".trimMargin()
         )
         println()
         println(" A) der Mond ")
-        println(" B) Die Aphrodite /Venus")
-        println(" C) der Klöppel (krone)")
+        println(" B) die Venus")
+        println(" C) der Saturn ")
         try {
 
             val frageMitNummer7 = "A"
@@ -271,13 +282,15 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             when (antwortvier) {
                 frageMitNummer7 -> {
                     println(
-                        """Du bist gut ..ok ..macht weiter!!""".trimMargin())
+                        """Du bist gut ..ok ..macht weiter!!""".trimMargin()
+                    )
                     richtigeAntwort = true
                     player.score += 1
                 }
 
                 frageMitNummer8 -> {
-                    println("""du hast verloren, du werdest einen Flamingo mit rosa Rock  in.... """
+                    println(
+                        """du hast verloren, du werdest einen Flamingo mit rosa Rock  in.... """
                     )
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {
@@ -329,6 +342,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
 
     // TODO  play weiter yes or no
+
+
     open fun spieleWeiter() {
 
         when (readln().trim().uppercase()) {
@@ -360,7 +375,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             //val firstAntwort: String = ersteAntwort
             when (ersteAntwort) {
                 frageMitNummer10 -> {
-                    println("""oooooo nein ... sie haben false antworten ,.. in 3 sekunde  senden wir dich in planet Hermes 
+                    println(
+                        """oooooo nein ... sie haben false antworten ,.. in 3 sekunde  senden wir dich in planet Hermes 
                     |...bis next rude...""".trimMargin()
                     )
                     richtigeAntwort = false
@@ -424,8 +440,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
         )
         println()
 
-        println(" A) Mars/Dias")
-        println(" B) Saturn/Kronos")
+        println(" A) Jupiter")
+        println(" B) Saturn")
         println(" C) Uranos")
         try {
 
@@ -439,10 +455,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             when (antwortTritte) {
                 frageMitNummer7 -> {
                     println(
-                        """leider war nicht die richtige antwort .Der Planet Dias  hat 80 Satelliten, aber der Planet kronos (Saturn) hat mehr. """.trimMargin()
+                        """leider war nicht die richtige antwort .Der Planet Jupiter  hat 80 Satelliten, aber der Planet kronos (Saturn) hat mehr. """.trimMargin()
                     )
                     richtigeAntwort = false
-                    println("in 3 sekunde Abflug um den Planeten Mars, um die Satelliten zu sehen  ")
+                    println("in 3 sekunde Abflug um den Planeten Jupiter, um die Satelliten zu sehen  ")
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
                             println("$i sekunde noch...")
@@ -451,13 +467,14 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte :")
+
                     }
+                    println("next player..Bitte :")
                 }
 
                 frageMitNummer8 -> {
                     println(
-                        """genau sehr gut .. kronos hat 83 Satelliten   """
+                        """genau sehr gut .. Saturn hat 83 Satelliten   """
                     )
                     richtigeAntwort = true
 
@@ -479,10 +496,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte:")
+
                     }
 
-
+                    println("next player..Bitte:")
                 }
 
 
@@ -521,8 +538,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             val antwortTritte: String = tritteAntwort
             when (antwortTritte) {
                 frageMitNummer7 -> {
-                    println("""falsche Antwort ...Es ist seit jeher das bekannteste Sternbild, was den Teil mit der charakteristischen 
-                            |"Topf"- oder "Pflug"-Form betrifft. Als flächenmäßig drittgrößte Konstellation.  """.trimMargin())
+                    println(
+                        """falsche Antwort ...Es ist seit jeher das bekannteste Sternbild, was den Teil mit der charakteristischen 
+                            |"Topf"- oder "Pflug"-Form betrifft. Als flächenmäßig drittgrößte Konstellation.  """.trimMargin()
+                    )
 
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
@@ -532,8 +551,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte :")
+
                     }
+                    println("next player..Bitte :")
                 }
 
                 frageMitNummer8 -> {
@@ -546,9 +566,11 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer9 -> {
-                    println("""Leider nein Adler... ist ein Sternbild, das bereits in der Antike von Ptolemäus 
+                    println(
+                        """Leider nein Adler... ist ein Sternbild, das bereits in der Antike von Ptolemäus 
                             |beschrieben wurde und zu den 88 offiziellen Sternbildern der Internationalen 
-                            |Astronomischen Union gehört.""".trimMargin())
+                            |Astronomischen Union gehört.""".trimMargin()
+                    )
 
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
@@ -558,10 +580,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte:")
+
                     }
 
-
+                    println("next player..Bitte:")
                 }
 
 
@@ -612,8 +634,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte :")
+
                     }
+                    println("next player..Bitte :")
                 }
 
                 frageMitNummer8 -> {
@@ -624,7 +647,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer9 -> {
-                    println("""falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
+                    println(
+                        """falsche Antwort ...hat nur  2 sind : Angst und Dimmos """.trimMargin()
                     )
                     richtigeAntwort = false
                     println("in 3 sekunden du werdest ein sterne ich überlegen dich hier zu lassen ")
@@ -637,10 +661,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                         }
                         Thread.sleep(2000)
-                        println("next player..Bitte :")
+
                     }
 
-
+                    println("next player..Bitte :")
                 }
 
 

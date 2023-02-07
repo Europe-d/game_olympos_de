@@ -1,4 +1,5 @@
 import kotlin.random.Random
+import java.io.File
 
 var welcome = "Willkommen im Olympus-Planet spiel "
 
@@ -85,13 +86,15 @@ fun main() {
     Thread.sleep(3000)
 
     println("wir anfangen mit erste frage...oou oou oou .. ")
-
+    println()
     mars.bewegen()
+    println()
     Thread.sleep(2000)
     mars.nichtBewegen(spielern[0])
 
     println("i see you ..")
-    Thread.sleep(5000)
+    println()
+    Thread.sleep(6000)
 
     println("jetzt dürfen wir die frage stellen")
     println()
@@ -110,7 +113,10 @@ fun main() {
     println()
     println("biete warten ..")
     // todo planet  bewegen...
+    println()
+
     neptun.bewegen()
+    Thread.sleep(2000)
     println()
     venus.bewegenLinks()
 
@@ -118,6 +124,7 @@ fun main() {
     //todo zweite frage
     println()
     println("zweite Frage jetzt können wir weiter spielen:")
+
 
     if (!frage.zweiteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
@@ -127,10 +134,12 @@ fun main() {
 
 
     mars.polizei()
+    println("ooo nein und den Vogel auch ... ")
     joker.gerauscht()
-    Thread.sleep(5000)
+
 
     joker.witz1()
+    Thread.sleep(5000)
     joker.gerauscht()
 
     println("Wenn ich dich fange, ich mache dich Grillen . ")
@@ -140,13 +149,16 @@ fun main() {
 
     //todo planet aktion
     saturn.meteoriten()
+    println()
     Thread.sleep(5000)
     uranus.blauFarbe()
 
 
     //todo tritte frage planet ruft
     println()
+    Thread.sleep(2000)
     mars.polizeiWieder()
+    println()
 
     if (!frage.tritteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
@@ -163,7 +175,9 @@ fun main() {
     println("tok tok ..")
     println("wer ist wieder ich möchte die vierte Frage stellen ???? ")
     Thread.sleep(5000)
+    joker.gerauscht()
     joker.witz2()
+    joker.gerauscht()
 
 
     println(" ${lassPlanet.keys.random()} sagt Achtung : ")
@@ -190,6 +204,9 @@ fun main() {
     joker.gerauscht()
     Thread.sleep(5000)
     joker.witz3()
+    println()
+    joker.gerauscht()
+    println()
 
     //todo willst du weiter spielen ?
     erde.back()
@@ -317,6 +334,7 @@ fun wuerfeln(player1: Player, player2: Player): Player {
 
     }
     return gewinner
+
 }
 
 fun wuerfeln2(player1: Player, player2: Player): Player {
@@ -328,6 +346,13 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
     var player1Roll2 = Random.nextInt(1, 6)
     println("${player2.name}: Du hast  $player1Roll2 gewürfelt")
 
+    val saveScore = (wuerfeln2(player1, player2))
+    val filePath = buildString {
+        append("game_olympos_de/scoreplayer.tsv")
+    }
+    val saveFile = File(filePath)
+
+    speichernScore(filePath)
 
     if (player1Roll > player1Roll2) {
         gewinner = player1
@@ -345,6 +370,8 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
 
     }
     return gewinner
+
+
 }
 
 fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Player {
@@ -355,4 +382,10 @@ fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Pla
         return spielern[0]
     }
 
+}
+
+
+fun speichernScore(filepath: String) {
+    val saveScore = File(filepath)
+    saveScore.appendText("Player\tspeichernScore\n")
 }

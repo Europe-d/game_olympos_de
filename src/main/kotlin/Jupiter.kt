@@ -18,7 +18,7 @@ wie die aller Planeten und Satelliten. Sein Volumen ist 1.321 Mal so groß wie d
 
     open fun bin() {
 
-        println("Jupiter : Ich bin der größte Planet des Sonnensystems in Bezug auf Größe und Masse. ho ho ho ..")
+        println(""" ${namePlanet}: Ich bin der größte Planet des Sonnensystems in Bezug auf Größe und Masse. ho ho ho ..""")
     }
 
 }
