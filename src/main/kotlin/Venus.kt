@@ -9,14 +9,13 @@ open class Venus(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, 
 
     open fun glamour() {
 
-        println(
-            """Achtung die schönste ....komm....what ?? 
-ich spreche von planet Venus ...ist der am zweitweitesten von der Sonne entfernte Planet in unserem Sonnensystem. 
-Er ist nach dem Mond das hellste Objekt am Nachthimmel..""".trimMargin()
-        )
+        println("""Achtung die Venus ist mit einer durchschnittlichen Sonnenentfernung von 108 Millionen Kilometern der
+zweitinnerste und mit einem Durchmesser von ca. 12.100 Kilometern der drittkleinste Planet des Sonnensystems.""".trimMargin())
     }
 
 
+
+    //Diese besteht zu 96 % aus Kohlenstoffdioxid und ihr Oberflächendruck ist 90-mal höher als auf der Erde.
 }
 
 /**
