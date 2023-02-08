@@ -348,13 +348,12 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
         when (readln().trim().uppercase()) {
             "NEIN" -> {
-                println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
-                exitProcess(0)
+                println("""Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.
+                    |-Trotzdem sehen uns wer gewonnen hat """.trimMargin())
                 gewonnen()
                 theEnd()
-
+                exitProcess(0)
             }
-
         }
     }
 

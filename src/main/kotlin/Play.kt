@@ -40,10 +40,10 @@ fun main() {
 
     //todo hier ich habe meine Planet jede class von ein Plante
 
-    var merkur = Merkur("Merkur", 0.382, 1, 0)
-    var venus = Venus("Venus", 0.949, 2, 0)
-    var erde = Erde("Erde", 1.00, 3, 1)
-    var mars = Mars("Mars", 0.532, 4, 2)
+    val merkur = Merkur("Merkur", 0.382, 1, 0)
+    val venus = Venus("Venus", 0.949, 2, 0)
+    val erde = Erde("Erde", 1.00, 3, 1)
+    val mars = Mars("Mars", 0.532, 4, 2)
     var jupiter = Jupiter("Jupiter", 80.0, 5, 80)
     var saturn = Saturn("Saturn", 9.449, 6, 83)
     var uranus = Uranus("Uranus", 4.007, 7, 27)
@@ -207,7 +207,7 @@ fun main() {
     println()
 
     //todo willst du weiter spielen ?
-    println(" ${lassPlanet.keys.random()} sagt Achtung : ")
+    println(""" ${lassPlanet.keys.random()} sagt Achtung 📢  : """)
     println("Erdbeben, SOS , Erdbeben ...")
     erde.back()
     println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
@@ -350,7 +350,7 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
 
     } else {
         println("echt jetzt : versuchen sie wieder ")
-        wuerfeln(player1, player2)
+        wuerfeln2(player1, player2)
 
     }
     return gewinner
@@ -371,11 +371,11 @@ fun theEnd() {
 
     }
 
-    println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
+    println("unsere plane sind in der Reihe: ${lassPlanet.entries}".trimMargin())
 
 
     println(
-        """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
+        """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners  : 
             |
             |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
     )
@@ -383,17 +383,18 @@ fun theEnd() {
     println("                                                       THE END")
 
 
+
     val difference = Duration.between(startSpiele, LocalTime.now())
-    println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} Minute. Viele dank """)
+    println("""wir haben gebracht in diese Spiel von zeit 🕜 : ${difference.toMinutes()} Minute. Viele dank """)
 
 
 }
-fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Player {
+fun wechselSpieler(aktuelleSpielern: Player, spielern: MutableList<Player>): Player {
 
-    if (aktuellespielern == spielern[0]) {
-        return spielern[1]
+    return if (aktuelleSpielern == spielern[0]) {
+        spielern[1]
     } else {
-        return spielern[0]
+        spielern[0]
     }
 
 }
