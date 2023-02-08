@@ -1,16 +1,16 @@
 import kotlin.random.Random
-
 import java.time.*
 
-
+//todo liste von player 1 und 2
+var spielern: MutableList<Player> = mutableListOf()
 
 var startSpiele = LocalTime.now()
-var endSpiele = LocalTime.now().plusMinutes(15)
+//var endSpiele = LocalTime.now().plusMinutes(15)
 
 
 var welcome = "Willkommen im Olympus-Planet spiel "
 
-var welcometext1 = """Bevor wir mit dem Spiel beginnen,wir erklären 
+var welcomeText1 = """Bevor wir mit dem Spiel beginnen,wir erklären 
                       diese planet ist mehr als 10.000 jahren ,
                       gibt keine wasser und wir essen nur pommes ..
     
@@ -24,10 +24,10 @@ fun main() {
 
     // todo welcome von usere spiel
     println(welcome)
-    println(welcometext1)
+    println(welcomeText1)
 
 
-    //todo hier ich habe meine Planet jede class eine var
+    //todo hier ich habe meine Planet jede class von ein Plante
 
     var merkur = Merkur("Merkur", 0.382, 1, 0)
     var venus = Venus("Venus", 0.949, 2, 0)
@@ -50,14 +50,12 @@ fun main() {
             "Uranus" to 7,
             "Neptun" to 8,
         )
-    // todo name von vogel
+    // todo name von vogel im Class
     var joker = Witz("Spaßvogel")
-    //todo mit dass rufe ich meine frage
+    //todo mit dass rufe ich meine frage von class
     var frage = Fragen("Moderator", 0)
-    //todo liste von player 1 und 2
 
-    var spielern: MutableList<Player> = mutableListOf()
-
+    //todo speichern die name von spieler
     for (i in 1..2) {
         println("Bitte geben Sie den Name des $i Spieler ein : ")
         spielern.add(Player(readln(), 0))
@@ -175,22 +173,19 @@ fun main() {
     println("tok tok ..")
     println("wer ist wieder ich möchte die vierte Frage stellen ???? ")
     Thread.sleep(2000)
+    //todo vogel witz 2
     joker.gerauscht()
     joker.witz2()
     joker.gerauscht()
 
-
-    println(" ${lassPlanet.keys.random()} sagt Achtung : ")
-    println("Erdbeben, SOS , Erdbeben , ...")
-
     Thread.sleep(2000)
     //todo planet bewegen
     merkur.dunkel()
-
     Thread.sleep(2000)
-    //todo vierte  frage 3 witz
+
+    //todo vierte  frage
     println()
-    println("ooookkkk ...wo wir geblieben ....cool .. ich bin neugierig  was du antworten")
+    println("ooookkkk ..cool ...wo wir geblieben ._? a ja bei vierte Frage.. ich bin neugierig  was du antworten..jetzt..")
 
 
     if (!frage.vierteFrage(aktuellePlayer)) {
@@ -201,6 +196,7 @@ fun main() {
     println()
     Thread.sleep(2000)
     venus.glamour()
+    // todo vogel 3 witz
     joker.gerauscht()
     Thread.sleep(2000)
     joker.witz3()
@@ -209,6 +205,8 @@ fun main() {
     println()
 
     //todo willst du weiter spielen ?
+    println(" ${lassPlanet.keys.random()} sagt Achtung : ")
+    println("Erdbeben, SOS , Erdbeben ...")
     erde.back()
     println("Möchten Sie das Spiel fortsetzen? (Ja / Nein)")
     frage.spieleWeiter()
@@ -311,7 +309,7 @@ fun main() {
 
 
         val difference = Duration.between(startSpiele, LocalTime.now())
-        println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} """)
+        println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} Minute. Viele dank """)
 
 
 
