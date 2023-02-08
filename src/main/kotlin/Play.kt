@@ -7,6 +7,17 @@ var spielern: MutableList<Player> = mutableListOf()
 var startSpiele = LocalTime.now()
 //var endSpiele = LocalTime.now().plusMinutes(15)
 
+var lassPlanet: MutableMap<String, Int> =
+    mutableMapOf(
+        "Merkur" to 1,
+        "Venus" to 2,
+        "Erde" to 3,
+        "Mars" to 4,
+        "Jupiter" to 5,
+        "Saturn" to 6,
+        "Uranus" to 7,
+        "Neptun" to 8,
+    )
 
 var welcome = "Willkommen im Olympus-Planet spiel "
 
@@ -39,17 +50,7 @@ fun main() {
     var neptun = Neptun("Neptun", 3.883, 8, 14)
 
 
-    var lassPlanet: MutableMap<String, Int> =
-        mutableMapOf(
-            "Merkur" to 1,
-            "Venus" to 2,
-            "Erde" to 3,
-            "Mars" to 4,
-            "Jupiter" to 5,
-            "Saturn" to 6,
-            "Uranus" to 7,
-            "Neptun" to 8,
-        )
+
     // todo name von vogel im Class
     var joker = Witz("Spaßvogel")
     //todo mit dass rufe ich meine frage von class
@@ -158,6 +159,7 @@ fun main() {
     mars.polizeiWieder()
     println()
 
+    println("tritte Frage jetzt können wir weiter spielen:")
     if (!frage.tritteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -187,7 +189,7 @@ fun main() {
     println()
     println("ooookkkk ..cool ...wo wir geblieben ._? a ja bei vierte Frage.. ich bin neugierig  was du antworten..jetzt..")
 
-
+    println("vierte Frage jetzt können wir weiter spielen:")
     if (!frage.vierteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -215,6 +217,9 @@ fun main() {
     //todo fünfte Frage
     println("soo...... du hast kraft und Geduld das ist sehr gut ?ok  wir frage weiter ")
     Thread.sleep(2000)
+    println()
+
+    println("fünfte Frage jetzt können wir weiter spielen:")
     if (frage.feunfteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -228,6 +233,8 @@ fun main() {
     Thread.sleep(2000)
 
     // todo sechste Frage
+    println()
+    println("sechste Frage jetzt können wir weiter spielen:")
     if (frage.sechsteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -243,6 +250,8 @@ fun main() {
 
 
     //todo siebte Frage
+    println()
+    println("siebte Frage jetzt können wir weiter spielen:")
     if (frage.siebteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -254,6 +263,9 @@ fun main() {
 
 
     //todo achte Frage
+
+    println()
+    println("achte Frage jetzt können wir weiter spielen:")
     if (frage.achteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -281,37 +293,7 @@ fun main() {
     frage.gewonnen()
     Thread.sleep(5000)
 
-
-
-    var playAgain1 = spielern[0].playScore()
-    var playAgain2 = spielern[1].playScore()
-
-    if (playAgain1 == playAgain2) {
-        println(
-            "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
-                    "um zu sehen wer der Gewinner ist : "
-        )
-        wuerfeln2(spielern[0], spielern[1])
-
-
-    }
-
-        println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
-
-
-        println(
-            """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
-            |
-            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
-        )
-
-        println("                                                       THE END")
-
-
-        val difference = Duration.between(startSpiele, LocalTime.now())
-        println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} Minute. Viele dank """)
-
-
+    theEnd()
 
 }
 
@@ -375,7 +357,37 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
 
 
 }
+fun theEnd() {
+    var playAgain1 = spielern[0].playScore()
+    var playAgain2 = spielern[1].playScore()
 
+    if (playAgain1 == playAgain2) {
+        println(
+            "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
+                    "um zu sehen wer der Gewinner ist : "
+        )
+        wuerfeln2(spielern[0], spielern[1])
+
+
+    }
+
+    println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
+
+
+    println(
+        """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
+            |
+            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
+    )
+
+    println("                                                       THE END")
+
+
+    val difference = Duration.between(startSpiele, LocalTime.now())
+    println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} Minute. Viele dank """)
+
+
+}
 fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Player {
 
     if (aktuellespielern == spielern[0]) {

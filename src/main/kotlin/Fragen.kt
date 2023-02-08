@@ -350,7 +350,8 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             "NEIN" -> {
                 println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
                 exitProcess(0)
-
+                gewonnen()
+                theEnd()
 
             }
 
@@ -689,7 +690,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     //todo wer hat gewonnen
     open fun gewonnen() {
         Thread.sleep(5000)
-        for (i in 5 downTo 1) {
+        for (i in 10 downTo 1) {
             if (i in 0..5) {
                 println("$i Minuten noch...")
             } else {

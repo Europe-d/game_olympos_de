@@ -24,7 +24,7 @@ open class Player(var name: String) {
                 println("let's go!")
 
             } else {
-                println("Sorry, kein Einlass zur Hier..versuchen sie wieder... ")
+                println("Sorry, kein Einlass zur Hier..versuchen sie wieder (Planet:du bist sehr klein ooooo süß) ... ")
                 alterVonplayer1()
             }
         } catch (ex: Exception) {
