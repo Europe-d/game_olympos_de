@@ -78,7 +78,7 @@ fun main() {
 
     //todo ersten wir würfeln dann wir anschaeun wer spielen anfagen
     println()
-    println(".. wer als Erster mit den Würfeln beginnt.")
+    println(".. mit  Würfeln sehen uns wer mit  frage anfangen kann.")
     Thread.sleep(4000)
     gewinner = wuerfeln(spielern[0], spielern[1])
     aktuellePlayer = gewinner
@@ -94,11 +94,11 @@ fun main() {
     println("wir anfangen mit erste frage...oou oou oou .. ")
     println()
     mars.nichtBewegen(spielern[0])
-    println("i see you ..")
+    println("i see you ..... ok")
     println()
     Thread.sleep(3000)
 
-    println("jetzt dürfen wir die frage stellen")
+    println("ja, jetzt dürfen wir die frage stellen")
     println()
     Thread.sleep(2000)
     //todo erste frage
