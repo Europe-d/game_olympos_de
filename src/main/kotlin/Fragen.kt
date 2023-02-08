@@ -26,7 +26,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 frageMitNummer1 -> {
                     println(
                         """oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden Eiswürfel ..
-                        |wir sendet dich bei planet Mars du bis aus ... """.trimMargin()
+                        |wir sendet dich bei planet Mars du bis aus ...😂😂 """.trimMargin()
                     )
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {
@@ -110,7 +110,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             when (antwortZweite) {
                 frageMitNummer4 -> {
                     println(
-                        """perfekt ...gehen wir zur nächsten Frage.""".trimMargin()
+                        """perfekt ...gehen wir zur nächsten Frage.😎""".trimMargin()
 
                     )
                     richtigeAntwort = true
@@ -121,7 +121,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 frageMitNummer5 -> {
                     println(
                         """tut es mir leid,Sie haben falsch geantwortet. 
-                            Sie werden in 3 sekunde eine Esel ...und bleiben sie in Erde  bis next rude """
+                            Sie werden in 3 sekunde eine Esel ...und bleiben sie in Erde  bis next rude 😂😂😂"""
                     )
                     richtigeAntwort = false
                     (3 downTo 1).forEach { i ->
@@ -134,7 +134,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         Thread.sleep(3000)
                     }
 
-                    println("viel spaß, bis zum nächsten rude. :) ")
+                    println("viel spaß, bis zum nächsten rude.")
                     println("next player..Bitte :")
 
                 }
@@ -142,7 +142,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 frageMitNummer6 -> {
                     println(
                         """tut es mir leid,Sie haben falsch geantwortet. 
-                            |Sie werden in 3 sekunde eine Esel ...und bleiben sie in Mars  bis next rude  :) """.trimMargin()
+                            |Sie werden in 3 sekunde eine Esel ....und bleiben sie in Erde  bis next rude   😂😂😂 """.trimMargin()
                     )
                     richtigeAntwort = false
                     println("next player..Bitte")
@@ -197,14 +197,14 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """,..echt jetzt ..
                         |hallooooo ersten muss tu rücksack kaufen ..aber ok ich lasse dich weil du  sympatisch bist.
-                        |Ich verschenken dir ein punkte :) :) hhehehehe.""".trimMargin()
+                        |Ich verschenken dir ein punkte 😂😂😂😂😂😂hhehehehe.""".trimMargin()
                     )
                     richtigeAntwort = true
                     player.score += 1
                 }
 
                 frageMitNummer8 -> {
-                    println("""...echt jetzt ..... hallooooo ersten muss tu rucksack kaufen  :) :) hhehehehe. """)
+                    println("""...echt jetzt ..... hallooooo ersten muss tu rucksack kaufen  😂😂😂😂😂😂hhehehehe. """)
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
@@ -221,7 +221,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
 
                 frageMitNummer9 -> {
                     println(
-                        """echt jetzt ... Hallooooo ersten muss tu rucksack kaufen  :) :) hhehehehe.
+                        """echt jetzt ... Hallooooo ersten muss tu rucksack kaufen  😂😂😂😂😂 hhehehehe.
                         |das geld  ich ..... . :O  :( ooo nein, einen Dieb ist da .""".trimMargin()
                     )
                     richtigeAntwort = false
@@ -264,7 +264,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
     open fun vierteFrage(player: Player): Boolean {
         print("jetzt sehen uns etwas andere ...  ")
         println(
-            """Wer ist der Satellit der Erde? ? !!""".trimMargin()
+            """Wer ist der Satellit der Erde? 🌏!!""".trimMargin()
         )
         println()
         println(" A) der Mond ")
@@ -351,7 +351,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 println("Das Spiel wird beendet. Schade, dass du nicht weiter spielen willst.")
                 exitProcess(0)
 
+
             }
+
         }
     }
 
@@ -400,9 +402,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 }
 
                 frageMitNummer12 -> {
-                    println("""oooooo nein ... sie haben false antworten ,.. in 5 sekunde  Sie werden ein Komet  ...... """)
+                    println("""oooooo nein ... sie haben false antworten ,.. in 3 sekunde  Sie werden ein Komet  ...... """)
                     richtigeAntwort = false
-                    for (i in 5 downTo 1) {
+                    for (i in 3 downTo 1) {
                         if (i in 0..ersteAntwort.length) {
                             println("$i sekunde noch...")
                         } else {
@@ -455,10 +457,10 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
             when (antwortTritte) {
                 frageMitNummer7 -> {
                     println(
-                        """leider war nicht die richtige antwort .Der Planet Jupiter  hat 80 Satelliten, aber der Planet kronos (Saturn) hat mehr. """.trimMargin()
+                        """leider war nicht die richtige antwort .Der Planet Jupiter  hat 80 Satelliten, aber der Planet Saturn hat mehr. """.trimMargin()
                     )
                     richtigeAntwort = false
-                    println("in 3 sekunde Abflug um den Planeten Jupiter, um die Satelliten zu sehen  ")
+                    println("""in 3 sekunde Abflug um den Planeten Jupiter, um die Satelliten zu sehen 🔭 """)
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
                             println("$i sekunde noch...")
@@ -486,7 +488,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                     println(
                         """Leider nein Uranos hat nur 27 """.trimMargin()
                     )
-                    println("in 3 sekunde Abflug um den Planeten Uranos, um die Satelliten zu sehen  ")
+                    println("""in 3 sekunde Abflug um den Planeten Uranos, um die Satelliten zu sehen  🔭""")
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {

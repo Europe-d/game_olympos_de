@@ -1,11 +1,11 @@
 import kotlin.random.Random
-import java.io.File
+
 import java.time.*
-import java.util.Locale
+
 
 
 var startSpiele = LocalTime.now()
-var endSpiele = startSpiele.plusMinutes(15)
+var endSpiele = LocalTime.now().plusMinutes(15)
 
 
 var welcome = "Willkommen im Olympus-Planet spiel "
@@ -63,8 +63,8 @@ fun main() {
         spielern.add(Player(readln(), 0))
     }
 
-    //todo hier die geben ihre alter
-    spielern[0].alterVonplayer1()
+     //todo hier die geben ihre alter
+     spielern[0].alterVonplayer1()
     spielern[1].alterVonplayer1()
 
     //todo das ist von die aktuelleplayer weil die würfeln auch
@@ -94,14 +94,10 @@ fun main() {
 
     println("wir anfangen mit erste frage...oou oou oou .. ")
     println()
-    mars.bewegen()
-    println()
-    Thread.sleep(2000)
     mars.nichtBewegen(spielern[0])
-
     println("i see you ..")
     println()
-    Thread.sleep(2000)
+    Thread.sleep(3000)
 
     println("jetzt dürfen wir die frage stellen")
     println()
@@ -119,8 +115,7 @@ fun main() {
     println("biete warten ..")
     // todo planet  bewegen...
     println()
-
-    neptun.bewegen()
+    //neptun.bewegen()
     Thread.sleep(2000)
     println()
     venus.bewegenLinks()
@@ -288,21 +283,10 @@ fun main() {
     frage.gewonnen()
     Thread.sleep(5000)
 
-    //spielern[0].playScore()
-    //spielern[1].playScore()
+
 
     var playAgain1 = spielern[0].playScore()
     var playAgain2 = spielern[1].playScore()
-
-//    if (spielern[0].playScore() == spielern[1].playScore()) {
-//        println(
-//            "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
-//                    "um zu sehen wer der Gewinner ist : "
-//        )
-//        wuerfeln2(spielern[0], spielern[1])
-//
-//
-//    }
 
     if (playAgain1 == playAgain2) {
         println(
@@ -313,24 +297,28 @@ fun main() {
 
 
     }
-    println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
+
+        println("unsere plane sind : ${lassPlanet.entries}".trimMargin())
 
 
-    println(
-        """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
+        println(
+            """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners : 
             |
             |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
-    )
+        )
 
-    println("                                                       THE END")
+        println("                                                       THE END")
+
+
+        val difference = Duration.between(startSpiele, LocalTime.now())
+        println("""wir haben gebracht in diese Spiel von 🕜 : ${difference.toMinutes()} """)
 
 
 
-do {
-    val difference = Duration.between(LocalTime.now(),endSpiele)
-   println("wir haben gebracht in diese Spiel von zeit : ${difference.toMinutes() } ")
-}while (difference.toMinutes() > 0)
 }
+
+
+
 fun wuerfeln(player1: Player, player2: Player): Player {
 
     var gewinner = player1
@@ -401,13 +389,3 @@ fun wechselSpieler(aktuellespielern: Player, spielern: MutableList<Player>): Pla
 }
 
 
-//fun speichernScore(filepath: String) {
-//    val saveScore = File(filepath)
-//    saveScore.appendText("Player\tspeichernScore\n")
-//
-//speichernScore(filePath)
-//val saveScore = (wuerfeln2(player1, player2))
-//val filePath = buildString {
-//    append("game_olympos_de/scoreplayer.tsv")
-//    val saveFile = File(filePath)
-//    saveFile.writeText("scoreplayer"+gewinner)}
