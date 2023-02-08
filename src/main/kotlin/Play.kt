@@ -1,5 +1,12 @@
 import kotlin.random.Random
 import java.io.File
+import java.time.*
+import java.util.Locale
+
+
+var startSpiele = LocalTime.now()
+var endSpiele = startSpiele.plusMinutes(15)
+
 
 var welcome = "Willkommen im Olympus-Planet spiel "
 
@@ -106,8 +113,6 @@ fun main() {
         println(aktuellePlayer.name)
 
     }
-
-
 
     Thread.sleep(2000)
     println()
@@ -318,9 +323,14 @@ fun main() {
     )
 
     println("                                                       THE END")
+
+
+
+do {
+    val difference = Duration.between(LocalTime.now(),endSpiele)
+   println("wir haben gebracht in diese Spiel von zeit : ${difference.toMinutes() } ")
+}while (difference.toMinutes() > 0)
 }
-
-
 fun wuerfeln(player1: Player, player2: Player): Player {
 
     var gewinner = player1
