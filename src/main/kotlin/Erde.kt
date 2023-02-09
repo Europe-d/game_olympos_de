@@ -7,4 +7,6 @@ open class Erde(namePlanet: String, umlaufgeschwindigkeit: Double, platz: Int, s
         println("""🌏 Planet ${this.namePlanet} sagt : PLEASE COME BACK""")
 
     }
+
+
 }

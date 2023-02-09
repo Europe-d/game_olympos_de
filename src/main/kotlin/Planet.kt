@@ -14,19 +14,28 @@ open class Planet(var namePlanet: String, var umlaufgeschwindigkeit: Double, var
 
 
     open fun bewegenLinks() {
-        this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 3.5)
+        this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 3.0)
         println("""unsere planet  bewegen gerade links weil ${namePlanet}  er dreht sich um die Sonne 
             |mit einer durchschnittlichen Geschwindigkeit ${umlaufgeschwindigkeit} Kilometern pro Sekunde""".trimMargin())
     }
 
     open fun bewegenRecht() {
-        this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 4.3)
+        this.umlaufgeschwindigkeit += (umlaufgeschwindigkeit * 4.0)
         println("""unsere planet  bewegen gerade Recht weil ${namePlanet}  mit einer durchschnittlichen 
                     Geschwindigkeit von  ${umlaufgeschwindigkeit} Kilometern pro Sekunde""")
     }
 
+    open fun pizza(){
+        println(" $namePlanet :  Nein Pizza")
+    }
 
+    open fun pommes(){
+        println(" $namePlanet: Nein Pommes")
+    }
 
+    open fun pommesIstUns(){
+        println(" $namePlanet: Nein Pommes ist für uns ")
+    }
 }
 
 

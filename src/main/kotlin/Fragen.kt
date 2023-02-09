@@ -145,7 +145,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                             |Sie werden in 3 sekunde eine Esel ....und bleiben sie in Erde  bis next rude   😂😂😂 """.trimMargin()
                     )
                     richtigeAntwort = false
-                    println("next player..Bitte")
+
                     for (i in 3 downTo 1) {
                         if (i in 0..antwortZweite.length) {
                             println("$i sekunde noch...")
@@ -155,7 +155,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                         Thread.sleep(3000)
 
                     }
-                    println("viel spaß, bis zum nächsten rude. :) ")
+                    println("""viel spaß,  💬 """)
                     println("next player..Bitte :")
                 }
 
@@ -196,15 +196,15 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 frageMitNummer7 -> {
                     println(
                         """,..echt jetzt ..
-                        |hallooooo ersten muss tu rücksack kaufen ..aber ok ich lasse dich weil du  sympatisch bist.
-                        |Ich verschenken dir ein punkte 😂😂😂😂😂😂hhehehehe.""".trimMargin()
+                        |Hallooooo ersten muss tu rücksack kaufen ..aber ok ich lasse dich weil du  sympathisch bist.
+                        |Ich verschenken dir ein punkte 😂😂😂😂😂😂hehehehehe.""".trimMargin()
                     )
                     richtigeAntwort = true
                     player.score += 1
                 }
 
                 frageMitNummer8 -> {
-                    println("""...echt jetzt ..... hallooooo ersten muss tu rucksack kaufen  😂😂😂😂😂😂hhehehehe. """)
+                    println("""...echt jetzt ..... Hallooooo ersten muss tu rucksack kaufen  😂😂😂😂😂😂hehehehehe. """)
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {
                         if (i in 0..tritteAntwort.length) {
@@ -222,7 +222,7 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
                 frageMitNummer9 -> {
                     println(
                         """echt jetzt ... Hallooooo ersten muss tu rucksack kaufen  😂😂😂😂😂 hhehehehe.
-                        |das geld  ich ..... . :O  :( ooo nein, einen Dieb ist da .""".trimMargin()
+                        |das geld 💰 ich ..... . :O  :( ooo nein, einen Dieb ist da .""".trimMargin()
                     )
                     richtigeAntwort = false
                     for (i in 3 downTo 1) {

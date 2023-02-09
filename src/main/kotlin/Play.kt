@@ -31,6 +31,17 @@ var welcomeText1 = """Bevor wir mit dem Spiel beginnen,wir erklären
                       zu finden mit eine Quiz .ist gut.. wenn jemand verloren  schauen mal was passiert"""
 
 
+//todo hier ich habe meine Planet jede class von ein Plante
+
+val merkur = Merkur("Merkur", 0.382, 1, 0)
+val venus = Venus("Venus", 0.949, 2, 0)
+val erde = Erde("Erde", 1.00, 3, 1)
+val mars = Mars("Mars", 0.532, 4, 2)
+var jupiter = Jupiter("Jupiter", 80.0, 5, 80)
+var saturn = Saturn("Saturn", 9.449, 6, 83)
+var uranus = Uranus("Uranus", 4.007, 7, 27)
+var neptun = Neptun("Neptun", 3.883, 8, 14)
+
 fun main() {
 
     // todo welcome von usere spiel
@@ -38,16 +49,8 @@ fun main() {
     println(welcomeText1)
 
 
-    //todo hier ich habe meine Planet jede class von ein Plante
 
-    val merkur = Merkur("Merkur", 0.382, 1, 0)
-    val venus = Venus("Venus", 0.949, 2, 0)
-    val erde = Erde("Erde", 1.00, 3, 1)
-    val mars = Mars("Mars", 0.532, 4, 2)
-    var jupiter = Jupiter("Jupiter", 80.0, 5, 80)
-    var saturn = Saturn("Saturn", 9.449, 6, 83)
-    var uranus = Uranus("Uranus", 4.007, 7, 27)
-    var neptun = Neptun("Neptun", 3.883, 8, 14)
+
 
 
 
@@ -62,8 +65,8 @@ fun main() {
         spielern.add(Player(readln(), 0))
     }
 
-     //todo hier die geben ihre alter
-     spielern[0].alterVonplayer1()
+    //todo hier die geben ihre alter
+    spielern[0].alterVonplayer1()
     spielern[1].alterVonplayer1()
 
     //todo das ist von die aktuelleplayer weil die würfeln auch
@@ -91,14 +94,14 @@ fun main() {
     println()
     Thread.sleep(3000)
 
-    println("wir anfangen mit erste frage...oou oou oou .. ")
+    println("""wir anfangen mit erste frage...oou oou oou warten. """)
     println()
     mars.nichtBewegen(spielern[0])
     println("i see you ..... ok")
     println()
     Thread.sleep(3000)
 
-    println("ja, jetzt dürfen wir die frage stellen")
+    println("ja, jetzt dürfen wir die frage stellen : ")
     println()
     Thread.sleep(2000)
     //todo erste frage
@@ -122,7 +125,10 @@ fun main() {
     Thread.sleep(2000)
     //todo zweite frage
     println()
-    println("zweite Frage jetzt können wir weiter spielen:")
+    println(
+        """2️⃣:
+zweite Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
 
 
     if (!frage.zweiteFrage(aktuellePlayer)) {
@@ -159,7 +165,9 @@ fun main() {
     mars.polizeiWieder()
     println()
 
-    println("tritte Frage jetzt können wir weiter spielen:")
+    println(
+        """3️⃣:
+tritte Frage jetzt können wir weiter spielen:""".trimMargin())
     if (!frage.tritteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -168,7 +176,7 @@ fun main() {
 
     Thread.sleep(2000)
     println("pzzzzzzzziiiiiii....pzzzzziiii")
-    println("ooooo ein Planet  ruft uns an ..wer ist : ")
+    println("""ooooo ein Planet ☎️ ruft uns an ..wer ist : """)
     saturn.luft(mars)
     println()
     Thread.sleep(2000)
@@ -189,7 +197,8 @@ fun main() {
     println()
     println("ooookkkk ..cool ...wo wir geblieben ._? a ja bei vierte Frage.. ich bin neugierig  was du antworten..jetzt..")
 
-    println("vierte Frage jetzt können wir weiter spielen:")
+    println("""4️⃣
+vierte Frage jetzt können wir weiter spielen:""".trimMargin())
     if (!frage.vierteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -219,7 +228,8 @@ fun main() {
     Thread.sleep(2000)
     println()
 
-    println("fünfte Frage jetzt können wir weiter spielen:")
+    println("""5️⃣:
+fünfte Frage jetzt können wir weiter spielen:""".trimMargin())
     if (frage.feunfteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -234,7 +244,8 @@ fun main() {
 
     // todo sechste Frage
     println()
-    println("sechste Frage jetzt können wir weiter spielen:")
+    println("""6️⃣:
+sechste Frage jetzt können wir weiter spielen:""".trimMargin())
     if (frage.sechsteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -251,7 +262,8 @@ fun main() {
 
     //todo siebte Frage
     println()
-    println("siebte Frage jetzt können wir weiter spielen:")
+    println("""7️⃣:
+Siebte Frage jetzt können wir weiter spielen:""".trimMargin())
     if (frage.siebteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -265,7 +277,8 @@ fun main() {
     //todo achte Frage
 
     println()
-    println("achte Frage jetzt können wir weiter spielen:")
+    println("""8️⃣:
+achte Frage jetzt können wir weiter spielen:""".trimMargin())
     if (frage.achteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -296,7 +309,6 @@ fun main() {
     theEnd()
 
 }
-
 
 
 fun wuerfeln(player1: Player, player2: Player): Player {
@@ -357,6 +369,7 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
 
 
 }
+
 fun theEnd() {
     var playAgain1 = spielern[0].playScore()
     var playAgain2 = spielern[1].playScore()
@@ -377,11 +390,26 @@ fun theEnd() {
     println(
         """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners  : 
             |
-            |ist Natürlich  "POMMES" Guten Appetit.""".trimMargin()
+            |ist Natürlich 4: SAGT =  "PIZZA" 🍕 /  4: SAGT = "POMMES"🍟 .
+            |OOOO NEIN DIE STREITEN WIEDER 😱: """.trimMargin()
+
     )
+    mars.pommes()
+    Thread.sleep(1000)
+    venus.pizza()
+    Thread.sleep(1000)
+    neptun.pommes()
+    Thread.sleep(1000)
+    jupiter.pizza()
+    Thread.sleep(1000)
+    uranus.pommes()
+    Thread.sleep(1000)
+    merkur.pizza()
+    Thread.sleep(1000)
+    saturn.pommesIstUns()
 
-    println("                                                       THE END")
 
+    println("""                      😐 Erde sagt 😐: ICH SEHE ES  "Wir essen  keine Pommes Heute  THE END" """)
 
 
     val difference = Duration.between(startSpiele, LocalTime.now())
@@ -389,6 +417,7 @@ fun theEnd() {
 
 
 }
+
 fun wechselSpieler(aktuelleSpielern: Player, spielern: MutableList<Player>): Player {
 
     return if (aktuelleSpielern == spielern[0]) {

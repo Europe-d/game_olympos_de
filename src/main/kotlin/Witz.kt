@@ -53,11 +53,7 @@ open class Witz(var name: String) {
     }
 }
 
-/**
- * Fritzchen fragt seinen Lehrer:
- * "Kann man für etwas bestraft werden, was man nicht gemacht hat?"
- * "Nein natürlich nicht." "Gut, ich habe nämlich meine Hausaufgaben nicht gemacht!"
- */
+
 
 /**
  *Das sind viele Fledermäuse, die in einer Höhle untergebracht sind.
