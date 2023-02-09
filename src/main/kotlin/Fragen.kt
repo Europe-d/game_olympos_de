@@ -691,9 +691,9 @@ open class Fragen(name: String, score: Int) : Player(name, score) {
         Thread.sleep(5000)
         for (i in 5 downTo 1) {
             if (i in 0..5) {
-                println("$i Minuten noch...")
+                println("$i Sekunden noch...")
             } else {
-                println("$i Minute noch...")
+                println("$i Sekunden noch...")
             }
             Thread.sleep(2000)
         }
