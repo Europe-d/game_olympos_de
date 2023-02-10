@@ -42,16 +42,14 @@ var saturn = Saturn("Saturn", 9.449, 6, 83)
 var uranus = Uranus("Uranus", 4.007, 7, 27)
 var neptun = Neptun("Neptun", 3.883, 8, 14)
 
+// todo name von vogel im Class
+var joker = Witz("Spaßvogel")
+
 fun main() {
 
     // todo welcome von usere spiel
     println(welcome)
     println(welcomeText1)
-
-
-
-
-
 
 
     // todo name von vogel im Class
@@ -76,7 +74,9 @@ fun main() {
     println()
 
     //todo bewegen und vorstellen von user mit jahre
+    Thread.sleep(500)
     println("So welcome ${spielern[0].name} und  ${spielern[1].name} bitte fest halten ... ")
+    Thread.sleep(500)
     saturn.bewegen()
 
     //todo ersten wir würfeln dann wir anschaeun wer spielen anfagen
@@ -137,37 +137,39 @@ zweite Frage jetzt können wir weiter spielen:""".trimMargin()
     }
     println()
 
-
+    Thread.sleep(500)
     mars.polizei()
+    Thread.sleep(500)
     println("ooo nein und den Vogel auch ... ")
     joker.gerauscht()
-
-
     joker.witz1()
     Thread.sleep(2000)
     joker.gerauscht()
 
     println("Wenn ich dich fange, ich mache dich Grillen . ")
-    Thread.sleep(2000)
+    Thread.sleep(500)
     println()
+    Thread.sleep(500)
     println("pssssssssssss Ruhe , jemand bewegt :")
-
+    Thread.sleep(500)
     //todo planet aktion
     saturn.meteoriten()
     println()
     Thread.sleep(2000)
     uranus.blauFarbe()
-
+    Thread.sleep(500)
 
     //todo tritte frage planet ruft
     println()
     Thread.sleep(2000)
     mars.polizeiWieder()
+    Thread.sleep(500)
     println()
 
     println(
         """3️⃣:
-tritte Frage jetzt können wir weiter spielen:""".trimMargin())
+tritte Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (!frage.tritteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -176,11 +178,14 @@ tritte Frage jetzt können wir weiter spielen:""".trimMargin())
 
     Thread.sleep(2000)
     println("pzzzzzzzziiiiiii....pzzzzziiii")
+    Thread.sleep(500)
     println("""ooooo ein Planet ☎️ ruft uns an ..wer ist : """)
+    Thread.sleep(500)
     saturn.luft(mars)
     println()
     Thread.sleep(2000)
     println("tok tok ..")
+    Thread.sleep(500)
     println("wer ist wieder ich möchte die vierte Frage stellen ???? ")
     Thread.sleep(2000)
     //todo vogel witz 2
@@ -188,7 +193,7 @@ tritte Frage jetzt können wir weiter spielen:""".trimMargin())
     joker.witz2()
     joker.gerauscht()
 
-    Thread.sleep(2000)
+    Thread.sleep(3000)
     //todo planet bewegen
     merkur.dunkel()
     Thread.sleep(2000)
@@ -197,8 +202,10 @@ tritte Frage jetzt können wir weiter spielen:""".trimMargin())
     println()
     println("ooookkkk ..cool ...wo wir geblieben ._? a ja bei vierte Frage.. ich bin neugierig  was du antworten..jetzt..")
 
-    println("""4️⃣
-vierte Frage jetzt können wir weiter spielen:""".trimMargin())
+    println(
+        """4️⃣
+vierte Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (!frage.vierteFrage(aktuellePlayer)) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -208,11 +215,14 @@ vierte Frage jetzt können wir weiter spielen:""".trimMargin())
     Thread.sleep(2000)
     venus.glamour()
     // todo vogel 3 witz
+    Thread.sleep(500)
     joker.gerauscht()
     Thread.sleep(2000)
     joker.witz3()
+    Thread.sleep(500)
     println()
     joker.gerauscht()
+    Thread.sleep(500)
     println()
 
     //todo willst du weiter spielen ?
@@ -228,8 +238,10 @@ vierte Frage jetzt können wir weiter spielen:""".trimMargin())
     Thread.sleep(2000)
     println()
 
-    println("""5️⃣:
-fünfte Frage jetzt können wir weiter spielen:""".trimMargin())
+    println(
+        """5️⃣:
+fünfte Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (frage.feunfteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -244,26 +256,32 @@ fünfte Frage jetzt können wir weiter spielen:""".trimMargin())
 
     // todo sechste Frage
     println()
-    println("""6️⃣:
-sechste Frage jetzt können wir weiter spielen:""".trimMargin())
+    println(
+        """6️⃣:
+sechste Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (frage.sechsteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
     }
     Thread.sleep(2000)
     uranus.platz
+    Thread.sleep(500)
     saturn.meteoriten()
-
+    Thread.sleep(500)
     println()
     neptun.bewegen()
+    Thread.sleep(500)
     jupiter.bin()
     Thread.sleep(2000)
 
 
     //todo siebte Frage
     println()
-    println("""7️⃣:
-Siebte Frage jetzt können wir weiter spielen:""".trimMargin())
+    println(
+        """7️⃣:
+Siebte Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (frage.siebteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -277,8 +295,10 @@ Siebte Frage jetzt können wir weiter spielen:""".trimMargin())
     //todo achte Frage
 
     println()
-    println("""8️⃣:
-achte Frage jetzt können wir weiter spielen:""".trimMargin())
+    println(
+        """8️⃣:
+achte Frage jetzt können wir weiter spielen:""".trimMargin()
+    )
     if (frage.achteFrage(aktuellePlayer) == false) {
         aktuellePlayer = wechselSpieler(aktuellePlayer, spielern)
         println(aktuellePlayer.name)
@@ -290,10 +310,11 @@ achte Frage jetzt können wir weiter spielen:""".trimMargin())
 
     Thread.sleep(2000)
     joker.gerauscht()
+    Thread.sleep(500)
     joker.witz4()
     joker.gerauscht()
     Thread.sleep(4000)
-    println("jetzt komm ..hier.. jetzt wirst du sehen (Here is your end.) ..!!!")
+    println("jetzt komm ..reicht.. jetzt wirst du sehen (Here is your end.) ..!!!")
     println("trillern....trillern.. ")
     Thread.sleep(1000)
     println()
@@ -333,6 +354,7 @@ fun wuerfeln(player1: Player, player2: Player): Player {
 
     } else {
         println("versuchen sie wieder ")
+        Thread.sleep(500)
         wuerfeln(player1, player2)
 
     }
@@ -373,7 +395,8 @@ fun wuerfeln2(player1: Player, player2: Player): Player {
 fun theEnd() {
     var playAgain1 = spielern[0].playScore()
     var playAgain2 = spielern[1].playScore()
-
+    println()
+    Thread.sleep(500)
     if (playAgain1 == playAgain2) {
         println(
             "Unsere Playern haben gleich punkte deswegen wir würfeln noch ein mal " +
@@ -385,7 +408,7 @@ fun theEnd() {
     }
 
     println("unsere plane sind in der Reihe: ${lassPlanet.entries}".trimMargin())
-
+    Thread.sleep(500)
 
     println(
         """die sagen alle ${lassPlanet.keys.sorted().size} zusammen : das Geschenk des Gewinners  : 
@@ -407,9 +430,11 @@ fun theEnd() {
     merkur.pizza()
     Thread.sleep(1000)
     saturn.pommesIstUns()
+    Thread.sleep(1000)
 
+    joker.gerauscht()
 
-    println("""                      😐 Erde sagt 😐: ICH SEHE ES  "Wir essen  keine Pommes Heute  THE END" """)
+    println("""              😐 Erde sagt 😐: oooo Nein Vogel kommt.. :  "Wir essen  keine Pommes Heute : THE END" """)
 
 
     val difference = Duration.between(startSpiele, LocalTime.now())
